@@ -1,0 +1,26 @@
+<!---------------------------------------------------------------------------  PRODUCTS/PRODUCT_LIST.HTML  -->
+{% extends 'base.html' %}
+
+{% block title %}Products{% endblock %}
+
+
+{% block content %}
+<h1>Products</h1>
+
+<div class="row">
+    {% for category, products in category_products.items %}
+    <!-- {{ category }} -->
+    <div class="col-md-3">
+        <h2>{{ category }}</h2>
+        <div class="product-container">
+            {% for product in products %}
+            <div class="product">
+                <p>{{ product.title }}</p>
+                <!-- Add more product details if needed -->
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
