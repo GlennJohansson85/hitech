@@ -25,7 +25,7 @@ def product_list(request):
         products = Product.objects.filter(category=category)
         category_products[category.name] = products
 
-    return render(request, 'products/products.html', {
+    return render(request, 'products/product_list.html', {
         'category_products': category_products,
     })
 
