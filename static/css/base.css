@@ -1,78 +1,70 @@
-/*_________________________________________________________________________   BASE.HTML - EXTENDS TO ALL TEMPLATES */
+/*_________________________________________________________________________BASE.HTML - EXTENDS TO ALL TEMPLATES */
 
-/*_____________________________________________________________________   OVERALL */
+/*_____________________________________________________________________OVERALL */
 html {
-    background: linear-gradient(to right, #000000, #264a5c, #264a5c, #000000);
-    background-size: cover; 
-    background-repeat: no-repeat;
+    background-color: #2b4162;
+    background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
 }
 
 body {
     max-width: 1200px;
     margin: 0 auto !important;
-    background-color: #000!important;
+    background-color: #ffffff00!important;
 }
 
-
-
-/*________________________________________________________   FONTS */
+/*________________________________________________________FONTS */
 @font-face {
-    font-family: 'TechHeadlines-3Pzp'; /*_____________ BRAND - H1 */
+    font-family: 'TechHeadlines-3Pzp'; /*_____________ brand */
     src: url('/static/font/TechHeadlines-3Pzp.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'JetbrainsMonoExtrabold-ywLd5'; /*______ NAVBAR */
-    src: url('/static/font/JetbrainsMonoExtrabold-ywLd5.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'JetbrainsMonoBold-51Xez'; /*______ DROPDOWN */
+    font-family: 'JetbrainsMonoBold-51Xez'; /*________ nav + dropdown */
     src: url('/static/font/JetbrainsMonoBold-51Xez.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'TechHeadlinesItalic-8D0M'; /*_______ JUMBATRON */
+    font-family: 'TechHeadlinesItalic-8D0M'; /*_______ jumbatron */
     src: url('/static/font/TechHeadlinesItalic-8D0M.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Headlines-SemiBold'; /*___ none*/
+    font-family: 'Headlines-SemiBold'; /*_____________ none*/
     src: url('/static/font/Headlines-SemiBold.otf') format('truetype');
 }
 
-
-
-/*_____________________________________________________________   NAVBAR */
-
-.navbar-brand-a { /* Brand */
-    color: #d5d5d5;
+/*_____________________________________________________________________NAVBAR */
+.navbar-brand-a {
+    font-family: 'TechHeadlines-3Pzp', sans-serif;
+    font-size: 30px; /*_______________________________ brand size */
     letter-spacing: 1px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     text-decoration: none;
-    font-family: 'TechHeadlines-3Pzp', sans-serif;
+    color: #d5d5d5;
 }
 
 .navbar-brand-a:hover {
-    color: #ffc401; /* Brand hover color */
+    color: #ffc401;
 }
 
 .navbar .nav-link {
-    font-family: 'JetbrainsMonoExtrabold-ywLd5', sans-serif; /* Links (text + icons) */
-    font-size: 14px;
+    font-family: 'JetbrainsMonoBold-51Xez', sans-serif;
     color: #d5d5d5;
 }
 
 .navbar .nav-link:hover {
-    color: #ffc401; /* Icon and text hover color */
+    color: #ffc401; /*______________________________ Icon + font hover color */
+}
+
+.navbar.navbar-expand-lg .fa-lg {
+    font-size: 25px !important;/*_____________________ icon size - top navbar */
 }
 
 .nav-link.dropdown-toggle::after {
-    display: none; /* Removes dropdown arrow */
+    display: none; /*_________________________________ Remove dropdown arrow */
 }
 
-.dropdown-item {
-    font-family: 'JetbrainsMonoBold-51Xez', sans-serif; /* Dropdown Text */
+.dropdown-item { /*___________________________________ Dropdown Text */
+    font-family: 'JetbrainsMonoBold-51Xez', sans-serif; 
     font-size: 12px;
 }
-

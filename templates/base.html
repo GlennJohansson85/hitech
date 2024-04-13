@@ -33,35 +33,36 @@
 </head>
 <!--------------------------------------------------------------------------------------------------------------------->
 <body>
-    <!-- TOP NAVBAR -->
+<!--------------------------------------------------------------------------------------------------- TOP NAVBAR -->
     <header class="navbar navbar-expand-lg navbar-dark bg-transparent">
         <div class="container-fluid">
-            <!-- HOME/BRAND -->
+<!---------------------------------------------------------------------------- HOME/BRAND -->
             <div class="navbar-brand">
                 <a class="navbar-brand-a" href="{% url 'home' %}">hitech</a>
             </div>
             <ul class="navbar-nav flex-row">
-                <!-- CONTACT -->
+<!------------------------------------------------------------------------ CONTACT -->
                 <li class="nav-item me-4">
                     <a class="nav-link" href="{% url 'contact' %}">
                         <span>Contact</span>
                         <i class="fas fa-envelope fa-lg"></i>
                     </a>
                 </li>
-                <!-- USER -->
+<!------------------------------------------------------------------------ PROFILE -->
                 <li class="nav-item me-4 dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="userDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdownMenuLink" 
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <span>Profile</span>
                         <i class="fas fa-user fa-lg"></i>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="userDropdownMenuLink">
                         <li><a class="dropdown-item" href="#">User</a></li>
                         <li><a class="dropdown-item" href="#">Admin</a></li>
-                        <!-- Add more dropdown items here -->
+                            <!-- Add more dropdown items here -->
                     </ul>
                 </li>
-                <!-- CART -->
-                <li class="nav-item me-4">
+                    <!------------------------------------------------------------------------- CART -->
+                   <li class="nav-item me-4">
                     <a class="nav-link" href="{% url 'home' %}">
                         <span>Cart</span>
                         <i class="fas fa-shopping-cart fa-lg"></i>
