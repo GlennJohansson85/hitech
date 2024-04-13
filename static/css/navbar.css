@@ -1,18 +1,3 @@
-/*_________________________________________________________________________   BASE.HTML - EXTENDS TO ALL TEMPLATES */
-
-/*_____________________________________________________________________   OVERALL */
-html {
-    background: linear-gradient(to right, #000000, #264a5c, #264a5c, #000000);
-    background-size: cover; 
-    background-repeat: no-repeat;
-}
-
-body {
-    max-width: 1200px;
-    margin: 0 auto !important;
-    background-color: #000!important;
-}
-
 
 
 /*________________________________________________________   FONTS */
@@ -42,7 +27,7 @@ body {
 }
 
 
-
+/*_________________________________________________________________________   BASE.HTML - EXTENDS TO ALL TEMPLATES */
 /*_____________________________________________________________   NAVBAR */
 
 .navbar-brand-a { /* Brand */
@@ -75,4 +60,7 @@ body {
     font-family: 'JetbrainsMonoBold-51Xez', sans-serif; /* Dropdown Text */
     font-size: 12px;
 }
+
+
+
 

@@ -1,30 +1,39 @@
 <!---------------------------------------------------------------------------  PRODUCTS/PRODUCT_LIST.HTML  -->
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}Products{% endblock %}
 
-{% block content %}
-<h1>Products</h1>
+{% block corecss %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/product_list.css' %}">
+{% endblock %}
 
-<div class="row">
-    {% for category, products in category_products.items %}
-    <div class="col-md-3">
-        <h2>{{ category }}</h2>
-        <div class="product-container">
+{% block content %}
+    <h1>Products</h1>
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
             {% for product in products %}
-                <div class="product">
-                    {% if product.image %}
-                        <img src="{{ product.image.url }}" alt="{{ product.title }}">
-                    {% else %}
-                        <img src="{% static 'path_to_placeholder_image.jpg' %}" alt="Placeholder Image">
-                    {% endif %}
-                    <h2>{{ product.title }}</h2>
-                    <p>{{ product.description }}</p>
-                    <p>Price: ${{ product.price }}</p>
-                    <!-- Add more product details if needed -->
+                <div class="col mb-4">
+                    <div class="card h-100">
+                        {% if product.image %}
+                            <!-- Display the product image if available -->
+                            <img src="{{ product.image.url }}" alt="{{ product.title }}" class="card-img-top">
+                        {% else %}
+                            <!-- If no image is available, display a placeholder image -->
+                            <img src="{% static 'placeholder_image.jpg' %}" alt="Placeholder Image" class="card-img-top">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.title }}</h5>
+                            <p class="card-text">{{ product.description }}</p>
+                            <p class="card-text">Price: ${{ product.price }}</p>
+                            <!-- Add more product details if needed -->
+                        </div>
+                    </div>
                 </div>
             {% endfor %}
         </div>
     </div>
-    {% endfor %}
-</div>
 {% endblock %}
+
+
