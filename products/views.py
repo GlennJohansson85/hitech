@@ -2,6 +2,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Category, Product, Subcategory
 
+from .forms import ProductForm
+
 
 def product_category(request, category_id):
     category = Category.objects.get(pk=category_id)
@@ -39,34 +41,36 @@ def product_detail(request, product_id):
 
 def product_add(request):
     """ A view to add a new product """
-    # Assuming you have a form defined for adding products
-    form = None
-    template = 'product/product_add.html'
-    context = {
-        'form': form,
-    }
-    return render(request, template, context)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('product_list')  # Redirect to the product list page
+    else:
+        form = ProductForm()
+        
+    return render(request, 'product_add.html', {'form': form})
 
 
 def product_edit(request, product_id):
     """ A view to edit an existing product """
-    # Assuming you have a form defined for editing products
-    form = None
     product = get_object_or_404(Product, pk=product_id)
-    template = 'product/product_edit.html'
-    context = {
-        'form': form,
-        'product': product,
-    }
-    return render(request, template, context)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            return redirect('product_list')  # Redirect to the product list page
+    else:
+        form = ProductForm(instance=product)
+        
+    return render(request, 'products/product_edit.html', {'form': form, 'product': product})
 
 
 def product_delete(request, product_id):
     """ A view to delete an existing product """
     product = get_object_or_404(Product, pk=product_id)
-    product.delete()
-    # Assuming you're using Django's messages framework
-    from django.contrib import messages
-    messages.success(request, 'Product deleted!')
-
-    return redirect('products')
+    if request.method == 'POST':
+        product.delete()
+        return redirect('product_list')  # Redirect to the product list page
+    
+    return render(request, 'products/product_delete.html', {'product': product})

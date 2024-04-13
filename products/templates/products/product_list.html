@@ -1,4 +1,3 @@
-<!---------------------------------------------------------------------------  PRODUCTS/PRODUCT_LIST.HTML  -->
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Products{% endblock %}
@@ -11,29 +10,33 @@
 {% block content %}
     <h1>Products</h1>
 
-    <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
-            {% for product in products %}
-                <div class="col mb-4">
-                    <div class="card h-100">
-                        {% if product.image %}
-                            <!-- Display the product image if available -->
-                            <img src="{{ product.image.url }}" alt="{{ product.title }}" class="card-img-top">
-                        {% else %}
-                            <!-- If no image is available, display a placeholder image -->
-                            <img src="{% static 'placeholder_image.jpg' %}" alt="Placeholder Image" class="card-img-top">
-                        {% endif %}
-                        <div class="card-body">
-                            <h5 class="card-title">{{ product.title }}</h5>
-                            <p class="card-text">{{ product.description }}</p>
-                            <p class="card-text">Price: ${{ product.price }}</p>
-                            <!-- Add more product details if needed -->
+    <div class="product_list_container">
+        <div class="row row-2">
+            <h2>All Products</h2>
+            <select>
+                <option>Default</option>
+                <option>Category</option>
+                <option>Price</option>
+                <option>Rating</option>
+                <option>Sale</option>
+            </select>
+        </div>
+
+        <div class="row">
+            {% for category, products in category_products.items %}
+                <h3>{{ category }}</h3>
+                <div class="row">
+                    {% for product in products %}
+                        <div class="col-4">
+                            <div class="#">
+                                <img src="{{ product.image.url }}" alt="{{ product.title }}" class="card-img">
+                                <p>{{ product.title }}</p>
+                                <p>{{ product.price }}</p>
+                            </div>
                         </div>
-                    </div>
+                    {% endfor %}
                 </div>
             {% endfor %}
         </div>
     </div>
 {% endblock %}
-
-
