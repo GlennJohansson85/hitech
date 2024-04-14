@@ -2,8 +2,7 @@
 
 /*_____________________________________________________________________OVERALL */
 html {
-    background-color: #2b4162;
-    background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
+    background: linear-gradient(109.6deg, rgb(28, 28, 28) 40%, rgba(19, 28, 37, 0.96) 51.2%, rgb(0, 0, 0) 98.6%);
 }
 
 body {
@@ -19,11 +18,6 @@ body {
 }
 
 @font-face {
-    font-family: 'JetbrainsMonoBold-51Xez'; /*________ nav + dropdown */
-    src: url('/static/font/JetbrainsMonoBold-51Xez.ttf') format('truetype');
-}
-
-@font-face {
     font-family: 'TechHeadlinesItalic-8D0M'; /*_______ jumbatron */
     src: url('/static/font/TechHeadlinesItalic-8D0M.ttf') format('truetype');
 }
@@ -33,6 +27,16 @@ body {
     src: url('/static/font/Headlines-SemiBold.otf') format('truetype');
 }
 
+@font-face {
+    font-family: 'JetbrainsMonoBold-51Xez'; /*________ nav + dropdown */
+    src: url('/static/font/JetbrainsMonoBold-51Xez.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'JetbrainsMonoItalic-lg91X';
+    src: url('/static/font/JetbrainsMonoItalic-lg91X.ttf');
+}
+
 /*_____________________________________________________________________NAVBAR */
 .navbar-brand-a {
     font-family: 'TechHeadlines-3Pzp', sans-serif;
@@ -40,11 +44,11 @@ body {
     letter-spacing: 1px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     text-decoration: none;
-    color: #ffffff;
+    color: #ffc401;
 }
 
 .navbar-brand-a:hover {
-    color: #ffc401;
+    color: #fff;
 }
 
 .navbar .nav-link {

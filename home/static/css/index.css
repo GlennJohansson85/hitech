@@ -2,45 +2,54 @@
 
 /*_____________________________________________________________ FONTS */
 
-h1 { /* Jumbatron */
+h1 { /*______________________________________________ Jumbatron */
     font-family: 'TechHeadlinesItalic-8D0M','sans-serif';
     letter-spacing: 2px;
     word-spacing: 2px;
-    color: #fff!important;
+    color: #ffc401!important;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-h2 { /* Products.html */
+h2 { /*______________________________________________ Reviews, Blog, Contact */
     font-family: 'TechHeadlinesItalic-8D0M','sans-serif';
     letter-spacing: 1px;
-    color: #fff!important;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    word-spacing: 2px;
+    color: #ffc401!important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);:/* none */
 }
 
-h5 { /* Product Card Title */
+h4 { /*______________________________________________ Customer Reviews */
     font-family: 'TechHeadlines-3Pzp','sans-serif';
     letter-spacing: 1px;
-    color: #fff!important;
+    color: #ee6cd0;
+    text-shadow: 3px 3px 9px rgba(0, 0, 0, 0.89);
+}
+
+
+h5 { /*______________________________________________ Product Card Title */
+    font-family: 'TechHeadlines-3Pzp','sans-serif';
+    letter-spacing: 1px;
+    color: #fff;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-h6 { /* price tag */
+h6 { /*______________________________________________ price font */
     font-family: 'TechHeadlines-3Pzp','sans-serif';
     letter-spacing: 2px;
     color: #ffc401!important;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-h7 { /* Button */
+h7 { /*______________________________________________ Jumbatron */
     font-family: 'TechHeadlinesItalic-8D0M','sans-serif';
     letter-spacing: 1px;
-    color: #faf7f7!important;
+    color: #eae6e6!important;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-p { /* Products.html */
-    font-family: 'JetbrainsMonoBold-51Xez','sans-serif';
-    color: #fff!important;
+p { /*______________________________________________ Product cards + customer names */
+    font-family: 'JetbrainsMonoItalic-lg91X'!important;
+    color: #fff;
 }
 
 /*_____________________________________________________________ JUMBOTRON */
@@ -87,8 +96,7 @@ p { /* Products.html */
     box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5);
 }
 
-/*______________________________________________  CARD-BUTTON */
-
+/*_____________________________________________________________ BUTTONS */
 .btn-primary {
     background-color: #20815f!important; /* Primary button color */
     border-color: #fff!important;
@@ -97,4 +105,54 @@ p { /* Products.html */
 .btn-primary:hover {
     background-color: #ffc401!important; /* Darker shade on hover */
     border-color: #010101!important; 
+}
+
+/*_____________________________________________________________ REVIEWS */
+.h2-title {
+    padding-top: 40px;
+    padding-left: 40px; 
+}
+
+.review {
+    padding-top: 40px;
+    padding-left: 40px;
+
+}
+
+.name {
+    padding-top: 12px;
+    padding-left: 10px;
+    font-family: 'JetbrainsMonoItalic-lg91X'!important;
+}
+
+/*_____________________________________________________________ NEWSLETTER */
+.newsletter {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/*_____________________________________________________________ BLOG POSTS */
+.blog-posts {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/*_____________________________________________________________ DEALS */
+.deal-of-the-day {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/*_____________________________________________________________ SUPPORT */
+.contact-info {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
