@@ -20,15 +20,19 @@ def product_subcategory(request, category_id):
 
 
 def product_list(request):
-    """ A view to show all products """
+    """ A view to show all products grouped by categories and subcategories """
     categories = Category.objects.all()
-    category_products = {}
+    category_subcategories = {}
     for category in categories:
-        products = Product.objects.filter(category=category)
-        category_products[category.name] = products
+        subcategories = Subcategory.objects.filter(category=category)
+        subcategory_products = {}
+        for subcategory in subcategories:
+            products = Product.objects.filter(category=category, subcategory=subcategory)
+            subcategory_products[subcategory] = products
+        category_subcategories[category] = subcategory_products
 
     return render(request, 'products/product_list.html', {
-        'category_products': category_products,
+        'category_subcategories': category_subcategories,
     })
 
 
