@@ -108,6 +108,12 @@ p { /*______________________________________________ Product cards + customer na
 }
 
 /*_____________________________________________________________ REVIEWS */
+.review-container {
+    background-color: rgba(15, 14, 14, 0.58);
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+
 .h2-title {
     padding-top: 40px;
     padding-left: 40px; 
