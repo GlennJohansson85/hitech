@@ -10,153 +10,154 @@
 
 
 {% block content %}
+<div class=index-all>
 <!--------------------------------------------------------------------------------------------------- JUMBATRON -->
-<div class="jumbotron">
-  <h1>Welcome to hitech!</h1>
-  <h7>We got the best tech for the lowest price!</h7>
-  <br><br>
-  <a class="btn btn-primary" href="#" role="button"><h7>Shop Now!</h7></a>
-</div>
+  <div class="jumbotron">
+    <h1>Welcome to hitech!</h1>
+    <h7>We got the best tech for the lowest price!</h7>
+    <br><br>
+    <a class="btn btn-primary" href="#" role="button"><h7>Shop Now!</h7></a>
+  </div>
 <!--------------------------------------------------------------------------------------------------- PRODUCT CARDS -->
 <!------------------------------------------------------------------------ tv -->
-<div class="card-container">
+  <div class="card-container">
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="/media/tv/Samsung/oled/oled_grey_tv.png" alt="TV Image" class="card-img">
+          <div class="card-body">
+            <h5>Samsung 65-inch</h5>
+            <h6>only €1299</h6>
+            <a href="#" class="btn btn-primary"><h7>Buy Now!</h7></a>
+          </div>
+        </div>
+      </div>
+  <!------------------------------------------------------------------------ laptops -->
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="/media/laptops/apple/apple_laptops.avif" alt="Laptop Image" class="card-img">
+          <div class="card-body">
+            <h5>MacBook Air M3</h5>
+            <h6>€938</h6>
+            <a href="#" class="btn btn-primary"><h7>Buy Now!</h7></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!------------------------------------------------------------------------ smartphones -->
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="/media/smartphones/apple/iphone14-black-half.png" alt="Mobile Image" class="card-img">
+          <div class="card-body">
+            <h5>Iphone 15</h5>
+            <h6>€949</h6>
+            <a href="#" class="btn btn-primary"><h7>Buy Now!</h7></a>
+          </div>
+        </div>
+      </div>
+  <!------------------------------------------------------------------------ cameras -->
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="/media/cameras/sony/vintage/sony_dark_dim.png" alt="Camera Image" class="card-img">
+          <div class="card-body">
+            <h5>S Alpha 7</h5>
+            <h6>€1340</h6>
+            <a href="#" class="btn btn-primary"><h7>Buy Now!</h7></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--------------------------------------------------------------------------------------------------- REVIEWS -->
+  <div class="review-container">
+  <h2 class="h2-title">Customer Reviews</h2>
+  <div class="row mb-4">
+    <div class="col-md-6">
+        <div class="review">
+          <div>
+            <h4 class="quote">"Best customer service!"</h4>
+            <p class="name">Peter Schmidt, Berlin</p>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+      <div class="review">
+        <div>
+          <h4 class="quote">"Fast shipping"</h4>
+          <p class="name">Mikael Persson, Stockholm</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-md-6">
+        <div class="review">
+          <div>
+            <h4 class="quote">"Neat prices, for good products!"</h4>
+            <p class="name">Jan Karlsen, Copenhagen</p>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+      <div class="review">
+        <div>
+          <h4 class="quote">"Great help finding my new TV!"</h4>
+          <p class="name">Laura Param, Barcelona</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!--------------------------------------------------------------------------------------------------- Newsletter Signup -->
   <div class="row mb-4">
     <div class="col-md-6">
       <div class="card text-center">
-        <img src="/media/tv/Samsung/oled/oled_grey_tv.png" alt="TV Image" class="card-img">
         <div class="card-body">
-          <h5>Samsung 65-inch</h5>
-          <h6>only €1299</h6>
-          <a href="#" class="btn btn-primary"><h7>Buy Now!</h7></a>
-        </div>
-      </div>
-    </div>
-<!------------------------------------------------------------------------ laptops -->
-    <div class="col-md-6">
-      <div class="card text-center">
-        <img src="/media/laptops/apple/apple_laptops.avif" alt="Laptop Image" class="card-img">
-        <div class="card-body">
-          <h5>MacBook Air M3</h5>
-          <h6>€938</h6>
-          <a href="#" class="btn btn-primary"><h7>Buy Now!</h7></a>
+          <h2>Subscribe to Our Newsletter</h2>
+          <p>Get the latest updates, promotions, and product announcements delivered straight to your inbox.</p>
+          <!-- Newsletter form here -->
         </div>
       </div>
     </div>
   </div>
-<!------------------------------------------------------------------------ smartphones -->
+
+  <!--------------------------------------------------------------------------------------------------- Latest blog posts -->
+  <div class="row mb-4">
+    <div class="col-md-8">
+      <h2>Latest Blog Posts</h2>
+      <!-- latest blog posts here -->
+    </div>
+    <div class="col-md-4">
+      <!-- Sidebar content here -->
+    </div>
+  </div>
+
+  <!--------------------------------------------------------------------------------------------------- Deal of the Day -->
   <div class="row mb-4">
     <div class="col-md-6">
       <div class="card text-center">
-        <img src="/media/smartphones/apple/iphone14-black-half.png" alt="Mobile Image" class="card-img">
         <div class="card-body">
-          <h5>Iphone 15</h5>
-          <h6>€949</h6>
-          <a href="#" class="btn btn-primary"><h7>Buy Now!</h7></a>
+          <h2>Deal of the Day</h2>
+          <p>Don't miss out on today's special offer! Limited time only.</p>
+          <!-- Deal of the day product - featured here -->
         </div>
       </div>
     </div>
-<!------------------------------------------------------------------------ cameras -->
+  </div>
+
+  <!--------------------------------------------------------------------------------------------------- Customer Support Information -->
+  <div class="row">
     <div class="col-md-6">
-      <div class="card text-center">
-        <img src="/media/cameras/sony/vintage/sony_dark_dim.png" alt="Camera Image" class="card-img">
-        <div class="card-body">
-          <h5>S Alpha 7</h5>
-          <h6>€1340</h6>
-          <a href="#" class="btn btn-primary"><h7>Buy Now!</h7></a>
-        </div>
-      </div>
+      <h2>Contact Us</h2>
+      <!-- Contact information here -->
+    </div>
+    <div class="col-md-6">
+      <!-- social media links here -->
     </div>
   </div>
 </div>
-
-<!--------------------------------------------------------------------------------------------------- REVIEWS -->
-<div class="review-container">
-<h2 class="h2-title">Customer Reviews</h2>
-<div class="row mb-4">
-  <div class="col-md-6">
-      <div class="review">
-        <div>
-          <h4 class="quote">"Best customer service!"</h4>
-          <p class="name">Peter Schmidt, Berlin</p>
-        </div>
-      </div>
-  </div>
-  <div class="col-md-6">
-    <div class="review">
-      <div>
-        <h4 class="quote">"Fast shipping"</h4>
-        <p class="name">Mikael Persson, Stockholm</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row mb-4">
-  <div class="col-md-6">
-      <div class="review">
-        <div>
-          <h4 class="quote">"Neat prices, for good products!"</h4>
-          <p class="name">Jan Karlsen, Copenhagen</p>
-        </div>
-      </div>
-  </div>
-  <div class="col-md-6">
-    <div class="review">
-      <div>
-        <h4 class="quote">"Great help finding my new TV!"</h4>
-        <p class="name">Laura Param, Barcelona</p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------- Newsletter Signup -->
-<div class="row mb-4">
-  <div class="col-md-6">
-    <div class="card text-center">
-      <div class="card-body">
-        <h2>Subscribe to Our Newsletter</h2>
-        <p>Get the latest updates, promotions, and product announcements delivered straight to your inbox.</p>
-        <!-- Newsletter form here -->
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------- Latest blog posts -->
-<div class="row mb-4">
-  <div class="col-md-8">
-    <h2>Latest Blog Posts</h2>
-    <!-- latest blog posts here -->
-  </div>
-  <div class="col-md-4">
-    <!-- Sidebar content here -->
-  </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------- Deal of the Day -->
-<div class="row mb-4">
-  <div class="col-md-6">
-    <div class="card text-center">
-      <div class="card-body">
-        <h2>Deal of the Day</h2>
-        <p>Don't miss out on today's special offer! Limited time only.</p>
-        <!-- Deal of the day product - featured here -->
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--------------------------------------------------------------------------------------------------- Customer Support Information -->
-<div class="row">
-  <div class="col-md-6">
-    <h2>Contact Us</h2>
-    <!-- Contact information here -->
-  </div>
-  <div class="col-md-6">
-    <!-- social media links here -->
-  </div>
-</div>
-
 {% endblock %}
 

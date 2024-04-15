@@ -8,19 +8,22 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Products</h1>
 
+<div class="product_list-all">
+    <div class="title">
+        <h2>All Products</h2>
+    </div>    
     <div class="product_list_container">
         {% for category, subcategories in category_subcategories.items %}
             <div class="card mt-4">
-                <div class="card-header">
-                    <h3>{{ category.name }}</h3>
+                <div class="category-title">
+                    <h4>{{ category.name }}</h4>
                 </div>
                 <div class="card-body">
                     {% for subcategory, products in subcategories.items %}
                         <div class="card mt-3">
-                            <div class="card-header">
-                                <h4>{{ subcategory.name }}</h4>
+                            <div class="subcategory-title">
+                                <h5>{{ subcategory.name }}</h5>
                             </div>
                             <div class="card-body">
                                 <div class="row">
@@ -66,5 +69,6 @@
             {% endif %}
         </ul>
     </nav>
+</div>
 {% endblock %}
 

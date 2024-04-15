@@ -2,7 +2,7 @@
 
 /*_____________________________________________________________ FONTS */
 
-h1 { /*______________________________________________ Jumbatron */
+h1 {
     font-family: 'TechHeadlinesItalic-8D0M','sans-serif';
     letter-spacing: 2px;
     word-spacing: 2px;
@@ -50,6 +50,11 @@ h7 { /*______________________________________________ Jumbatron */
 p { /*______________________________________________ Product cards + customer names */
     font-family: 'JetbrainsMonoItalic-lg91X'!important;
     color: #fff;
+}
+
+.index-all {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /*_____________________________________________________________ JUMBOTRON */
