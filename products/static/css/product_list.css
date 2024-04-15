@@ -9,81 +9,62 @@
     margin-right: 20px;
 }
 
-.title { /* PRODUCTS */
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-left: 10px;
+.title { /* All Products */
+    margin-top: 10px;
+    font-family: 'TechHeadlines-3Pzp','sans-serif';
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #ffc401!important;
+}
+
+.category-title {
+    font-family: 'TechHeadlines-3Pzp','sans-serif';
+    letter-spacing: 2px;
+    color: #ee6cd0;
+}
+
+.subcategory-title {
+    font-family: 'TechHeadlines-3Pzp','sans-serif';
+    letter-spacing: 2px;
+    color: #bbd115;
 }
 
 .product_list_container {
-    margin-left: 20px;
-    margin-right: 20px;
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    margin-left: 10px;
+    margin-right: 10px;  
 }
 
 .card-body {
     margin-left: 10px;
 }
 
-.category-title {
-    font-family: 'TechHeadlines-3Pzp','sans-serif';
-    letter-spacing: 1px;
-    color: #ee6cd0;
-}
-.subcategory-title {
-    font-family: 'TechHeadlines-3Pzp','sans-serif';
-    font-size: 5px;
-    letter-spacing: 1px;
-    color: #bbd115;
+.card-img-top { /* img size in card */
+    width: 300px;
+    height: 200px; /* Maintain aspect ratio */
 }
 
-.card-img-top {
-    width: 100%; /* Set image width to 100% of its container */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.card-text {
+.card-title {
     font-size: 1rem;
     color: #fff;
 }
 
-.card.mt-4 {
-    margin-top: 1.5rem;
-}
-
-.card.mt-3 {
-    margin-top: 1rem;
-}
-
-.product-img {
-    height: 100px;
+.card-price {
+    font-size: 1rem;
+    color: #ffc401;
 }
 
 .card {
-    border: none; /* Remove border */
-    box-shadow: none; /* Remove box shadow */
     background-color: transparent; /* Make background transparent */
 }
 
-.card-header,
-.card-body {
-    padding: 0; /* Remove padding to make content closer */
-}
-
-.card-header h3,
-.card-body h4 {
-    margin: 0; /* Remove margin for header text */
-    padding: 10px; /* Add padding for header text */
-}
-
 .card-body .row {
-    margin: -15px; /* Adjust margin to align columns */
+    margin: -30px;
 }
 
 .card-body .col-lg-4,
 .card-body .col-md-6,
 .card-body .col-sm-12 {
-    padding: 15px; /* Add padding to columns */
+    padding: 10px; /* Add padding to columns */
 }
 
 /*_____________________________________________________________ RESPONSIVE COLUMNS */
