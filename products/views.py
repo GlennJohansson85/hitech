@@ -1,6 +1,7 @@
 #____________________________________________________________________  PRODUCTS/VIEWS.PY
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Category, Product, Subcategory
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .forms import ProductForm
 
@@ -20,7 +21,7 @@ def product_subcategory(request, category_id):
 
 
 def product_list(request):
-    """ A view to show all products grouped by categories and subcategories """
+    """ A view to show all products with pagination """
     categories = Category.objects.all()
     category_subcategories = {}
     for category in categories:
@@ -30,9 +31,20 @@ def product_list(request):
             products = Product.objects.filter(category=category, subcategory=subcategory)
             subcategory_products[subcategory] = products
         category_subcategories[category] = subcategory_products
+    
+    # Paginate the products
+    paginator = Paginator(Product.objects.all(), 10)  # Number of products per page
+    page = request.GET.get('page')
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
 
     return render(request, 'products/product_list.html', {
         'category_subcategories': category_subcategories,
+        'products': products,  # Pass paginated products to the template
     })
 
 

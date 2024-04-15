@@ -1,12 +1,12 @@
 /*__________________________________________________________________________________ PRODUCTS/STATIC/CSS/PRODUCT_LIST.CSS */
 /*_____________________________________________________________ PRODUCT CARDS */
 .card-header {
-    background-color: #007bff;
+    background-color: #343a40;
     color: #fff;
 }
 
 .card-title {
-    color: #333;
+    color: #fff;
     font-size: 1.25rem;
     font-weight: bold;
 }
@@ -22,7 +22,7 @@
 
 .card-text {
     font-size: 1rem;
-    color: #555;
+    color: #fff;
 }
 
 .card.mt-4 {
@@ -32,11 +32,36 @@
 .card.mt-3 {
     margin-top: 1rem;
 }
- 
+
+.product-img { /* not working */
+    height: 100px;
+}
+
 /*_____________________________________________________________ RESPONSIVE COLUMNS */
 @media (max-width: 767px) {
     .col-sm-12 {
         flex-basis: 100%;
         max-width: 100%;
     }
+}
+
+/*_____________________________________________________________ PAGINATION */
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination .page-item .page-link {
+    color: #007bff; /* Link color */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff; /* Active page background color */
+    border-color: #007bff;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #6c757d; /* Disabled page link color */
+    pointer-events: none;
+    background-color: #343a40; /* Disabled page background color */
+    border-color: #343a40;
 }
