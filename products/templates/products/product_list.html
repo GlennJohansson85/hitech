@@ -8,43 +8,45 @@
 {% endblock %}
 
 {% block content %}
-
-<div class="product_list-all">
-    <div class="title">
-        <h2>All Products</h2>
-    </div>    
-    <div class="product_list_container">
-        {% for category, subcategories in category_subcategories.items %}
-            <div class="card mt-4">
-                <div class="category-title">
-                    <h4>{{ category.name }}</h4>
-                </div>
-                <div class="card-body">
-                    {% for subcategory, products in subcategories.items %}
-                        <div class="card mt-3">
-                            <div class="subcategory-title">
-                                <h5>{{ subcategory.name }}</h5>
-                            </div>
-                            <div class="card-body">
-                                <div class="row">
-                                    {% for product in products %}
-                                        <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
-                                            <div class="card">
-                                                <img src="{{ product.image.url }}" alt="{{ product.title }}" class="card-img-top">
-                                                <div class="card-body">
-                                                    <h5 class="card-title">{{ product.title }}</h5>
-                                                    <p class="card-price">{{ product.price }}</p>
+    <div class="product_list-all">
+        <div class="title">
+            <h2>All Products</h2>
+        </div>    
+        <div class="product_list_container">
+            {% for category, subcategories in category_subcategories.items %}
+                <div class="card mt-4">
+                    <div class="category-title">
+                        <h4>{{ category.name }}</h4>
+                    </div>
+                    <div class="card-body">
+                        {% for subcategory, products in subcategories.items %}
+                            <div class="card mt-3">
+                                <div class="subcategory-title">
+                                    <h5>{{ subcategory.name }}</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        {% for product in products %}
+                                            <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+                                                <div class="card">
+                                                    <img src="{{ product.image.url }}" alt="{{ product.title }}" class="card-img-top">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">
+                                                            <a href="{% url 'product_detail' product.id %}">{{ product.title }}</a>
+                                                        </h5>
+                                                        <p class="card-price">{{ product.price }}</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    {% endfor %}
+                                        {% endfor %}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    {% endfor %}
+                        {% endfor %}
+                    </div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}
 

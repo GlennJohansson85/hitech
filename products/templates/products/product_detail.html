@@ -1,10 +1,12 @@
 <!---------------------------------------------------------------------------  PRODUCTS/PRODUCT_DETAIL.HTML  -->
 {% extends 'base.html' %}
-
-{% block title %}{{ product.title }} Detail {% endblock %}
+{% block title %}Product Detail{% endblock %}
 
 {% block content %}
-<h1>{{ product.title }} detail</h1>
-<p>Description: {{ product.description }}</p>
-<p>Price: ${{ product.price }}</p>
+    <div class="product-detail">
+        <h1>{{ product.title }}</h1>
+        <img src="{{ product.image.url }}" alt="{{ product.title }}">
+        <p>Description: {{ product.description }}</p>
+        <p>Price: {{ product.price }}</p>
+    </div>
 {% endblock %}
