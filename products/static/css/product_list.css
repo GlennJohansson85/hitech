@@ -6,7 +6,7 @@
 }
 
 .title {
-    margin-top: 10px;
+    margin-top: 40px;
     font-family: 'TechHeadlines-3Pzp','sans-serif';
     letter-spacing: 2px;
     word-spacing: 2px;
@@ -14,12 +14,14 @@
 }
 
 .category-title {
+    padding-top: 20px;
     font-family: 'TechHeadlines-3Pzp','sans-serif';
     letter-spacing: 2px;
     color: #ee6cd0;
 }
 
 .subcategory-title {
+    padding-bottom: 20px;
     font-family: 'TechHeadlines-3Pzp','sans-serif';
     letter-spacing: 2px;
     color: #bbd115;
@@ -27,11 +29,13 @@
 
 .product_list_container {
     margin-left: 10px;
-    margin-right: 10px;  
+    margin-right: 10px;
 }
 
 .card-body {
     margin-left: 10px;
+    border: none;
+
 }
 
 .card-img-top { /*________________ Img size in card */
@@ -51,6 +55,7 @@
 
 .card {
     background-color: transparent;
+    border: none!important;
 }
 
 .card-body .row {
@@ -60,7 +65,7 @@
 .card-body .col-lg-4,
 .card-body .col-md-6,
 .card-body .col-sm-12 {
-    padding: 10px;
+    
 }
 
 /*________________________________________________ RESPONSIVE COLUMNS */

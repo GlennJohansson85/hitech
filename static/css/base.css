@@ -2,15 +2,16 @@
 
 /*_________________________________________________________________ OVERALL */
 html {
-    background: linear-gradient(109.6deg, rgb(28, 28, 28) 40%, rgba(19, 28, 37, 0.96) 51.2%, rgb(0, 0, 0) 98.6%);
+    background: #121212;
 }
 
 body {
     max-width: 1200px;
     margin: 0 auto !important;
-    background-color: #121212!important;
+    background: linear-gradient(45deg, rgb(28, 28, 28) 40%, rgba(33, 33, 36, 0.96) 51.2%, rgb(0, 0, 0) 98.6%);
+    box-shadow: 0 0 200px rgba(165, 28, 189, 0.5);
 }
-
+    
 /*_________________________________________________________________ FONTS */
 @font-face { /*__________________ Brand + extendend to child temp. */
     font-family: 'TechHeadlines-3Pzp';
@@ -24,6 +25,7 @@ body {
 
 /*_________________________________________________________________ NAVBAR */
 .navbar-brand-a {
+    padding-left: 10px;
     font-family: 'TechHeadlines-3Pzp', sans-serif;
     font-size: 30px; /*__________ Brand size */
     letter-spacing: 1px;

@@ -10,17 +10,16 @@
 
 {% block content %}
     <div class="product_detail-all">
-        <h2>{{ product.subcategory.category.name }}</h2>
+        <h1>{{ product.subcategory.category.name }}</h1>
         <h3>{{ product.subcategory.name }}</h3>
             <h4>{{ product.title }}</h4>
             <div class="card-body">
-            <div class="product-image">
-                <img src="{{ product.image.url }}" alt="{{ product.title }}">
+                <div class="product-image">
+                    <img src="{{ product.image.url }}" alt="{{ product.title }}">
+                </div>
+                <h6>{{ product.price }}</h6>
+                <a href="#" class="btn btn-primary"><h7>Buy Now!</h7></a>
+                <p>{{ product.description }}</p>
             </div>
-            <h6>{{ product.price }}</h6>
-            <a href="#" class="btn btn-primary"><h7>Buy Now!</h7></a>
-            <p>{{ product.description }}</p>
-            
-        </div>
     </div>
 {% endblock %}
