@@ -1,0 +1,83 @@
+/*________________________________________________________________________ PRODUCT_DETAIL.CSS */
+
+
+@font-face { /* ________ H7 - Button */
+    font-family: 'TechHeadlinesItalic-8D0M';
+    src: url('/static/font/TechHeadlinesItalic-8D0M.ttf') format('truetype');
+}
+
+@font-face { /* ________ P - Description */
+    font-family: 'JetbrainsMonoMedium-nRvBM';
+    src: url('/static/font/JetbrainsMonoMedium-nRvBM.ttf') format('truetype');
+}
+
+.product_detail-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2, h3, h4, h6 {
+    font-family: 'TechHeadlines-3Pzp','sans-serif';
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+h2 { /*_________________ Category */
+    margin-top: 20px;
+    color: #ffc401;
+}
+
+h3 { /*_________________ Subcategory */
+    margin-top: 10px;
+    color: #ee6cd0;s
+}
+
+h4 {  /*_________________ Product name */
+    margin-top: 10px;
+    color: #bbd115;
+}
+
+h6 { /*___________________ Price */
+    margin-top: 20px;
+    color: #ffc401;
+}
+
+h7 { /*___________________ Button */
+    font-family:'TechHeadlinesItalic-8D0M','sans-serif';
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    margin-top: 20px;
+    max-width: 600px;
+    font-family: 'JetbrainsMonoMedium-nRvBM', sans-serif;
+    color: #fff;
+    font-size: 16px;
+}
+
+.card-body {
+    border: none;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.product-image img {
+    max-height: 400px;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    margin-top: 10px;
+    background-color: #20815f;
+    border-color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #ffc401;
+    border-color: #010101; 
+}
+
+

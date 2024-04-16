@@ -1,20 +1,16 @@
-/*__________________________________________________________________________________ PRODUCTS/STATIC/CSS/PRODUCT_LIST.CSS */
-/*_____________________________________________________________ PRODUCT CARDS */
-
-/*__________________________________________________________________________________ PRODUCTS/STATIC/CSS/PRODUCT_LIST.CSS */
-/*_____________________________________________________________ PRODUCT CARDS */
-
+/*______________________________________________________________ PRODUCTS/STATIC/CSS/PRODUCT_LIST.CSS */
+/*________________________________________________ PRODUCT CARDS */
 .product_list-all {
     margin-left: 20px;
     margin-right: 20px;
 }
 
-.title { /* All Products */
+.title {
     margin-top: 10px;
     font-family: 'TechHeadlines-3Pzp','sans-serif';
     letter-spacing: 2px;
     word-spacing: 2px;
-    color: #ffc401!important;
+    color: #ffc401;
 }
 
 .category-title {
@@ -38,9 +34,9 @@
     margin-left: 10px;
 }
 
-.card-img-top { /* img size in card */
+.card-img-top { /*________________ Img size in card */
     width: 300px;
-    height: 200px; /* Maintain aspect ratio */
+    height: 200px; /*_____________ Maintain aspect ratio */
 }
 
 .card-title {
@@ -54,7 +50,7 @@
 }
 
 .card {
-    background-color: transparent; /* Make background transparent */
+    background-color: transparent;
 }
 
 .card-body .row {
@@ -64,10 +60,10 @@
 .card-body .col-lg-4,
 .card-body .col-md-6,
 .card-body .col-sm-12 {
-    padding: 10px; /* Add padding to columns */
+    padding: 10px;
 }
 
-/*_____________________________________________________________ RESPONSIVE COLUMNS */
+/*________________________________________________ RESPONSIVE COLUMNS */
 @media (max-width: 767px) {
     .col-sm-12 {
         flex-basis: 100%;

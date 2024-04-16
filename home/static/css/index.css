@@ -2,6 +2,11 @@
 
 /*_____________________________________________________________ FONTS */
 
+@font-face {
+    font-family: 'TechHeadlinesItalic-8D0M'; /*______ Jumbatron */
+    src: url('/static/font/TechHeadlinesItalic-8D0M.ttf') format('truetype');
+}
+
 h1 {
     font-family: 'TechHeadlinesItalic-8D0M','sans-serif';
     letter-spacing: 2px;
@@ -33,7 +38,7 @@ h5 { /*______________________________________________ Product Card Title */
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-h6 { /*______________________________________________ price font */
+h6 { /*______________________________________________ Price font */
     font-family: 'TechHeadlines-3Pzp','sans-serif';
     letter-spacing: 2px;
     color: #ffc401!important;
