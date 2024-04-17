@@ -1,72 +1,119 @@
 /*______________________________________________________________ PRODUCTS/STATIC/CSS/PRODUCT_LIST.CSS */
-/*________________________________________________ PRODUCT CARDS */
-.product_list-all {
-    margin-left: 20px;
-    margin-right: 20px;
+
+/*________________________________________________ FONTS */
+@font-face {
+    font-family: 'TechHeadlines-3Pzp';
+    src: url('/static/font/TechHeadlines-3Pzp.ttf') format('truetype');
 }
 
-.title {
+@font-face {
+    font-family: 'JetbrainsMonoExtrabold-ywLd5';
+    src: url('/static/font/JetbrainsMonoExtrabold-ywLd5.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'TechHeadlinesItalic-8D0M';
+    src: url('/static/font/TechHeadlinesItalic-8D0M.ttf') format('truetype');
+}
+
+/*________________________________________________ PRODUCT CARDS */
+
+h1 { /*_____________ Title */
     margin-top: 40px;
+    margin-left: 20px;
     font-family: 'TechHeadlines-3Pzp','sans-serif';
     letter-spacing: 2px;
     word-spacing: 2px;
     color: #ffc401;
 }
 
-.category-title {
-    padding-top: 20px;
+h2 { /*_____________ Category */
+    margin-top: 40px;
+    margin-left: 60px;
     font-family: 'TechHeadlines-3Pzp','sans-serif';
     letter-spacing: 2px;
     color: #ee6cd0;
 }
 
-.subcategory-title {
-    padding-bottom: 20px;
+h3 { /*_____________ Subcategory */
+    margin-top: 40px;
+    margin-left:100px;
     font-family: 'TechHeadlines-3Pzp','sans-serif';
     letter-spacing: 2px;
     color: #bbd115;
 }
 
-.product_list_container {
-    margin-left: 10px;
-    margin-right: 10px;
+h5 { /*_____________ Product */
+    font-family: 'TechHeadlines-3Pzp','sans-serif';
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);/* none */
+    margin-top: 10px;
+
+}
+
+h6 { /*______________ Price */
+    margin-bottom: 10px;
+    font-family: 'TechHeadlines-3Pzp','sans-serif';
+    letter-spacing: 2px;
+    color: #ffc401!important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+h7 { /*______________ Button */
+    font-family: 'TechHeadlinesItalic-8D0M','sans-serif';
+    letter-spacing: 1px;
+    color: #eae6e6!important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .card-body {
-    margin-left: 10px;
-    border: none;
-
-}
-
-.card-img-top { /*________________ Img size in card */
-    width: 300px;
-    height: 200px; /*_____________ Maintain aspect ratio */
-}
-
-.card-title {
-    font-size: 1rem;
-    color: #fff;
-}
-
-.card-price {
-    font-size: 1rem;
-    color: #ffc401;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
 }
 
 .card {
-    background-color: transparent;
-    border: none!important;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), transparent);
 }
 
-.card-body .row {
-    margin: -30px;
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5);
 }
 
-.card-body .col-lg-4,
-.card-body .col-md-6,
-.card-body .col-sm-12 {
-    
+.product-img {
+    width: 300px;
+    height: 200px;
+    border-radius: 5px 5px 0 0; /* Rounded corners only at top */
 }
+
+.btn-primary {
+    margin-bottom: 10px;
+    background-color: #20815f;
+    border-color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #ffc401;
+    border-color: #010101; 
+}
+
+.product-link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.product-link:hover {
+    color: #ffc401;
+}
+
 
 /*________________________________________________ RESPONSIVE COLUMNS */
 @media (max-width: 767px) {
