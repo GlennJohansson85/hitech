@@ -1,13 +1,15 @@
 #____________________________________________________________________ PROFILES/FORMS.PY
-from django import forms 
-from .models import UserProfile
+from django import forms
 from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
+from .models import UserProfile
 
+from django_countries.fields import CountryField 
 
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        fields = ['first_name', 'last_name', 'email', 'phone_number', 'address']
+        fields = ['first_name', 'last_name', 'phone_number', 'address', 'email', 'country', 'profile_picture']
 
      
 class LoginForm(forms.Form):
@@ -16,8 +18,14 @@ class LoginForm(forms.Form):
 
 
 class RegisterForm(forms.Form):
-    username = forms.CharField()
+    first_name = forms.CharField(max_length=20)
+    last_name = forms.CharField(max_length=20)
+    phone_number = forms.CharField(max_length=15)
+    address = forms.CharField(max_length=255)
+    username = forms.CharField(max_length=20)
     email = forms.EmailField()
+    country = CountryField()
+    profile_picture = forms.ImageField(required=False)
     password = forms.CharField(widget = forms.PasswordInput)
     password2 = forms.CharField(label = 'Confirm password', widget = forms.PasswordInput)
 
