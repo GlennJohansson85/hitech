@@ -1,14 +1,15 @@
 /*________________________________________________________________________ PRODUCT_DETAIL.CSS */
 
-
-@font-face { /* ________ H7 - Button */
+/*_________________________________________________________ FONT FAMILIIES */
+@font-face {
     font-family: 'TechHeadlinesItalic-8D0M';
     src: url('/static/font/TechHeadlinesItalic-8D0M.ttf') format('truetype');
 }
 
-@font-face { /* ________ P - Description */
-    font-family: 'JetbrainsMonoMedium-nRvBM';
-    src: url('/static/font/JetbrainsMonoMedium-nRvBM.ttf') format('truetype');
+/*_________________________________________________________ OVERALL */
+body {
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
 .product_detail-all {
@@ -17,7 +18,7 @@
     align-items: center;
 }
 
-h1, h3, h4, h6 {
+h1, h3, h4, h5 {
     font-family: 'TechHeadlines-3Pzp','sans-serif';
     letter-spacing: 2px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -38,12 +39,12 @@ h4 {  /*_________________ Product name */
     color: #bbd115;
 }
 
-h6 { /*___________________ Price */
+h5 { /*___________________ Price */
     margin-top: 20px;
     color: #ffc401;
 }
 
-h7 { /*___________________ Button */
+h6 { /*___________________ Button */
     font-family:'TechHeadlinesItalic-8D0M','sans-serif';
     letter-spacing: 2px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -52,36 +53,59 @@ h7 { /*___________________ Button */
 p {
     margin-top: 20px;
     max-width: 600px;
-    font-family: 'JetbrainsMonoMedium-nRvBM', sans-serif;
+    font-family: 'Montesarri', sans-serif;
     color: #fff;
     font-size: 16px;
     
 }
 
+/*_________________________________________________________ CARD */
 .card-body {
-    border: none;
-    background: linear-gradient(109.6deg, rgb(28, 28, 28) 11%, rgba(19, 28, 37, 0.96) 39%, rgb(0, 0, 0) 98.6%);
-    margin-top: 10px;
-    text-align: center!important;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), transparent);
+    border-radius: 5px;
+    text-align: left;
     padding: 20px;
-
+    box-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
 .product-image img {
-    max-height: 400px;
-    max-width: 600px;
+    height: 400px;
+    width: 600px;
     border-radius: 5px;
 }
 
+/*_______________________________________ SHOP NOW - BUTTON */
 .btn-primary {
     margin-top: 10px;
+    padding-top: 10px;
     background-color: #20815f;
     border-color: #fff;
 }
 
 .btn-primary:hover {
     background-color: #ffc401;
-    border-color: #010101; 
+    border-color: #fff; 
 }
 
+/*_______________________________________ NEXT/PREV - BUTTON */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin-bottom: 40px;
+}
 
+.button-container button {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+    transition: color 0.3s;
+}
+
+.button-container button:hover {
+    color: #ffc401;
+}

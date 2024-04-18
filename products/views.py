@@ -1,6 +1,6 @@
 #____________________________________________________________________  PRODUCTS/VIEWS.PY
-from django.shortcuts import render, redirect, get_object_or_404
-from .models import Category, Product, Subcategory
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from .models import Category, Subcategory, Product
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .forms import ProductForm
@@ -51,8 +51,21 @@ def product_list(request):
 def product_detail(request, product_id):
     """ A view to show individual product details """
     product = get_object_or_404(Product, pk=product_id)
-
-    return render(request, 'products/product_detail.html', {'product': product})
+    
+    # Fetch the next and previous products based on some criteria
+    next_product = Product.objects.filter(id__gt=product.id).first()  # Get the next product by ID
+    prev_product = Product.objects.filter(id__lt=product.id).last()   # Get the previous product by ID
+    
+    next_product_url = reverse('product_detail', args=[next_product.id]) if next_product else None
+    prev_product_url = reverse('product_detail', args=[prev_product.id]) if prev_product else None
+    
+    context = {
+        'product': product,
+        'next_product_url': next_product_url,
+        'prev_product_url': prev_product_url,
+    }
+    
+    return render(request, 'products/product_detail.html', context)
 
 
 def product_add(request):
