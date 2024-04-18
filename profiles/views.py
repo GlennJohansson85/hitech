@@ -1,7 +1,7 @@
 #____________________________________________________________________ PROFILES/VIEWS.PY
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth import authenticate, login, get_user_model
-from .forms import UserProfileForm, LoginForm, RegisterForm
+from .forms import LoginForm, RegisterForm, UserProfileForm
 
 
 def profile(request):
@@ -37,15 +37,13 @@ User = get_user_model()
 
 def register(request):
     form = RegisterForm(request.POST or None)
-    context = {
-        'form': form
-    }
     if form.is_valid():
-        print(form.cleaned_data)
         username = form.cleaned_data.get('username')
         email = form.cleaned_data.get('email')
         password = form.cleaned_data.get('password')
         new_user = User.objects.create_user(username, email, password)
-        print(new_user)
+        # Redirect to the login page after successful registration
+        return redirect(reverse('account_login'))
 
-        return render(request, 'allauth/register.html', context)
+    context = {'form': form}
+    return render(request, 'allauth/register.html', context)
