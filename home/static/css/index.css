@@ -45,7 +45,7 @@ h6 { /*______________________________________________ Price font */
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-h7 { /*______________________________________________ Jumbatron */
+h7 { /*______________________________________________ Button */
     font-family: 'TechHeadlinesItalic-8D0M','sans-serif';
     letter-spacing: 1px;
     color: #eae6e6!important;
@@ -103,11 +103,12 @@ p { /*______________________________________________ Product cards + customer na
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 2px rgb(255, 255, 255);
 }
 
 /*_____________________________________________________________ BUTTONS */
 .btn-primary {
+    padding-top: 8px;
     background-color: #20815f!important; /* Primary button color */
     border-color: #fff!important;
 }
