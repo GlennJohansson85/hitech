@@ -12,5 +12,12 @@
     "editor.semanticTokenColorCustomizations": {
         "[01e61500-862c-41cd-b653-48d2ef7b1882]": {}
     },
-    "editor.colorDecoratorsActivatedOn": "hover"
+    "workbench.activityBar.location": "top",
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.settings.openDefaultSettings": true,
+    "dotnetAcquisitionExtension.enablePreviewFeatures": true,
+    "C_Cpp.default.compilerPath": "",
+    "editor.colorDecoratorsActivatedOn": "hover",
+    "editor.defaultColorDecorators": true,
+    "editor.experimentalInlineEdit.backgroundColoring": true
 }

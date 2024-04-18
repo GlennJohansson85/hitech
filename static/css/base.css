@@ -29,9 +29,9 @@ body {
     font-family: 'TechHeadlines-3Pzp', sans-serif;
     font-size: 30px; /*__________ Brand size */
     letter-spacing: 1px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     text-decoration: none;
     color: #fff;
+    text-shadow: 2px 2px 2px rgba(179, 46, 203, 0.92);
 }
 
 .navbar-brand-a:hover {
