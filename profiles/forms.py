@@ -1,9 +1,15 @@
 #____________________________________________________________________ PROFILES/FORMS.PY
-from django import forms
+from django import forms 
+from .models import UserProfile
 from django.contrib.auth import get_user_model
 
-User = get_user_model()
 
+class UserProfileForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ['first_name', 'last_name', 'email', 'phone_number', 'address']
+
+     
 class LoginForm(forms.Form):
     username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)

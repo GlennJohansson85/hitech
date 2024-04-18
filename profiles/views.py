@@ -1,11 +1,15 @@
 #____________________________________________________________________ PROFILES/VIEWS.PY
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, get_user_model
-from .forms import LoginForm, RegisterForm
+from .forms import UserProfileForm, LoginForm, RegisterForm
 
-def user(request):
+
+def profile(request):
+    profile = get_object_or_404(UserProfile, user=request.user)
     
     return render(request, 'profiles/profiles.html', {})
+
+
 
 
 #---------------------------------------------------------LOGIN

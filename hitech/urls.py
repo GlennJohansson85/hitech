@@ -9,11 +9,10 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
     path('', include('home.urls')),
     path('', include('profiles.urls')),
     path('product/', include('products.urls')),
-    path('about/', views.about, name='about'),
-    path('contact/', views.contact, name='contact'),
 ]
 
 if settings.DEBUG:
