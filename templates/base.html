@@ -1,16 +1,16 @@
-<!--------------------------------------------------------------------------------------------------- TEMPLATES/BASE.HTML -->
+<!------------------------------------------------------------------------ TEMPLATES/BASE.HTML -->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!------------------------------------------------------------------------ meta -->
+<!--------------------------------------------------------------- Meta -->
     {% block meta %}
         {{ block.super }}
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     {% endblock %}
-<!------------------------------------------------------------------------ corecss -->
+<!--------------------------------------------------------------- Corecss -->
     {% block corecss %}
         {{ block.super }}
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css">  
     {% endblock %}
-<!------------------------------------------------------------------------ corejs -->
+<!--------------------------------------------------------------- Corejs -->
     {% block corejs %}
         {{ block.super }}
         <script src="https://kit.fontawesome.com/6f8277bec5.js" crossorigin="anonymous"></script>
@@ -27,15 +27,12 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     {% endblock %}
-<!------------------------------------------------------------------------ title -->
+<!--------------------------------------------------------------- Title -->
     <title>{% block title %}HITECH{% endblock %}</title>
 </head>
 
-
-
 <body>
-
-    <!-- Message section -->
+<!------------------------------------------------------------------------ LOGIN MESSAGE -->
     {% if messages %}
     <div id="message-container" class="position-absolute top-0 end-0 m-3" role="alert">
         {% for message in messages %}
@@ -46,22 +43,22 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     {% endif %}
-<!--------------------------------------------------------------------------------------------------- TOP NAVBAR -->
+<!------------------------------------------------------------------------ TOP NAVBAR -->
     <header class="navbar navbar-expand-lg navbar-dark bg-transparent">
         <div class="container-fluid">
-<!------------------------------------------------------------------------ home/brand -->
+<!--------------------------------------------------------------- Brand -->
             <div class="navbar-brand">
                 <a class="navbar-brand-a" href="{% url 'home' %}">hitech</a>
             </div>
             <ul class="navbar-nav flex-row">
-<!------------------------------------------------------------------------ contact -->
+<!--------------------------------------------------------------- Contact -->
                 <li class="nav-item me-4">
                     <a class="nav-link" href="#">
                         <span>Contact</span>
                         <i class="fas fa-envelope fa-lg"></i>
                     </a>
                 </li>
-<!------------------------------------------------------------------------ profile -->
+<!--------------------------------------------------------------- Profile -->
                 <li class="nav-item me-4 dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdownMenuLink" 
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -72,10 +69,9 @@
                         <li><a class="dropdown-item" href="{% url 'register' %}">Register</a></li>
                         <li><a class="dropdown-item" href="{% url 'profile' %}">User</a></li>
                         <li><a class="dropdown-item" href="#">Admin</a></li>
-                            <!-- Add more dropdown items here -->
                     </ul>
                 </li>
-<!------------------------------------------------------------------------- cart -->
+<!--------------------------------------------------------------- Cart -->
                    <li class="nav-item me-4">
                     <a class="nav-link" href="{% url 'home' %}">
                         <span>Cart</span>
@@ -86,26 +82,25 @@
         </div>
     </header>
 
-<!--------------------------------------------------------------------------------------------------- BOTTOM NAVBAR -->
+<!------------------------------------------------------------------------ BOTTOM NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
         <div class="container-fluid">
-<!------------------------------------------------------------------------- toggler button -->
+<!--------------------------------------------------------------- Toggler button -->
             <button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-<!------------------------------------------------------------------------- links -->
             <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-<!------------------------------------------------------------------------- All product link -->
+<!--------------------------------------------------------------- All - link -->
                     <li class="nav-item">
                         <a class="nav-link nav-icon" href="{% url 'product_list' %}">
                             <i class="fa-solid fa-circle-down"></i>
                             <span>All</span>
                         </a>
                     </li>
-<!------------------------------------------------------------------------- tv dropdown -->
+<!--------------------------------------------------------------- TV dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle nav-icon" href="#" id="tvDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-tv"></i>
@@ -119,7 +114,7 @@
                             <li><a class="dropdown-item" href="#">Sony</a></li>
                         </ul>
                     </li>
-<!------------------------------------------------------------------------- laptops dropdown -->
+<!--------------------------------------------------------------- Laptops dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle nav-icon" href="#" id="computerDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-laptop"></i>
@@ -133,7 +128,7 @@
                             <li><a class="dropdown-item" href="#">Sony</a></li>
                         </ul>
                     </li>
-<!------------------------------------------------------------------------- smartphones dropdown -->
+<!--------------------------------------------------------------- Smartphones dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle nav-icon" href="#" id="mobileDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-mobile"></i>
@@ -147,7 +142,7 @@
                             <li><a class="dropdown-item" href="#">Sony-Ericsson</a></li>
                         </ul>
                     </li>
-<!------------------------------------------------------------------------- cameras dropdown -->
+<!--------------------------------------------------------------- Cameras dropdown -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle nav-icon" href="#" id="cameraDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-camera"></i>
@@ -165,16 +160,12 @@
             </div>
         </div>
     </nav>
-
-
-
-<!--------------------------------------------------------------------------------------------------- MAIN CONTENT BLOCK -->
+<!------------------------------------------------------------------------- MAIN CONTENT BLOCK -->
     <div>
         {% block content %}
         {% endblock %}
     </div>
-
-<!-- JavaScript to hide message gradually -->
+<!------------------------------------------------------------------------- LOGIN MESSAGE - Script -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         var messageContainer = document.getElementById('message-container');
@@ -185,7 +176,6 @@
         }
     });
 
-    // Function to fade out element
     function fadeOut(element) {
         var opacity = 1;
         var fadeEffect = setInterval(function() {
