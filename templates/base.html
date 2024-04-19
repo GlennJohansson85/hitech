@@ -31,7 +31,21 @@
     <title>{% block title %}HITECH{% endblock %}</title>
 </head>
 
+
+
 <body>
+
+    <!-- Message section -->
+    {% if messages %}
+    <div id="message-container" class="position-absolute top-0 end-0 m-3" role="alert">
+        {% for message in messages %}
+        <div class="alert alert-success" role="alert">
+            {{ message }}
+        </div>
+        {% endfor %}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endif %}
 <!--------------------------------------------------------------------------------------------------- TOP NAVBAR -->
     <header class="navbar navbar-expand-lg navbar-dark bg-transparent">
         <div class="container-fluid">
@@ -55,6 +69,7 @@
                         <i class="fas fa-user fa-lg"></i>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="userDropdownMenuLink">
+                        <li><a class="dropdown-item" href="{% url 'register' %}">Register</a></li>
                         <li><a class="dropdown-item" href="{% url 'profile' %}">User</a></li>
                         <li><a class="dropdown-item" href="#">Admin</a></li>
                             <!-- Add more dropdown items here -->
@@ -151,10 +166,38 @@
         </div>
     </nav>
 
+
+
 <!--------------------------------------------------------------------------------------------------- MAIN CONTENT BLOCK -->
     <div>
         {% block content %}
         {% endblock %}
     </div>
+
+<!-- JavaScript to hide message gradually -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var messageContainer = document.getElementById('message-container');
+        if (messageContainer) {
+            setTimeout(function() {
+                fadeOut(messageContainer);
+            }, 2000);
+        }
+    });
+
+    // Function to fade out element
+    function fadeOut(element) {
+        var opacity = 1;
+        var fadeEffect = setInterval(function() {
+            if (opacity > 0) {
+                opacity -= 0.1;
+                element.style.opacity = opacity;
+            } else {
+                clearInterval(fadeEffect);
+                element.parentNode.removeChild(element);
+            }
+        }, 100);
+    }
+</script>
 </body>
 </html>

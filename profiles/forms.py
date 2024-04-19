@@ -2,14 +2,14 @@
 from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
-from .models import Profile
+from .models import UserProfile
 
 from django_countries.fields import CountryField 
 
 #_______________________________________________________ UserProfileForm
-class ProfileForm(forms.ModelForm):
+class UserProfileForm(forms.ModelForm):
     class Meta:
-        model = Profile
+        model = UserProfile
         fields = [
             'first_name',
             'last_name',
@@ -21,13 +21,13 @@ class ProfileForm(forms.ModelForm):
         ]
 
 #_______________________________________________________ LoginForm
-class LoginForm(forms.Form):
+class UserLoginForm(forms.Form):
     username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
 
 
 #_______________________________________________________ RegisterForm
-class RegisterForm(forms.Form): # ________ Widget for same style (contry + email fields)
+class UserRegisterForm(forms.Form): # ________ Widget for same style (contry + email fields)
     first_name = forms.CharField(max_length=20, widget=forms.TextInput(attrs={'class': 'form-control'}))
     last_name = forms.CharField(max_length=20, widget=forms.TextInput(attrs={'class': 'form-control'}))
     phone_number = forms.CharField(max_length=15, widget=forms.TextInput(attrs={'class': 'form-control'}))

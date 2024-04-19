@@ -70,4 +70,6 @@ input[type="password"] {
 
 
 
-
+.message.tags {
+    color: white;
+}

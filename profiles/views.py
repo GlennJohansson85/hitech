@@ -1,8 +1,11 @@
+#______________________________________________________________________________ HITECH/PROFILES/VIEWS.PY
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth import authenticate, login, get_user_model
-from .forms import LoginForm, RegisterForm, ProfileForm
-from .models import Profile
+
+from .forms import UserLoginForm, UserRegisterForm
+from .models import UserProfile
+
 from django.contrib import messages
 
 User = get_user_model()
@@ -10,34 +13,35 @@ User = get_user_model()
 
 #______________________________________________________________________________ PROFILE VIEW
 @login_required
-def profile(request):
+def user_profile(request):
     profile = get_object_or_404(Profile, user=request.user)
     return render(request, 'profiles/profile.html', {'profile': profile})
 
 
 #______________________________________________________________________________ LOGIN VIEW
-def login(request):
+def user_login(request):
     if request.method == 'POST':
-        form = LoginForm(request.POST)
+        form = UserLoginForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-
+                messages.success(request, 'Login successful. Welcome back!')
                 return redirect('home')  # Redirect to profile page after login
     else:
-        form = LoginForm()
+        form = UserLoginForm()
 
     return render(request, 'profiles/login.html', {'form': form})
 
 
 #______________________________________________________________________________ REGISTER VIEW
-def register(request):
+def user_register(request):
     if request.method == 'POST':
-        form = RegisterForm(request.POST)
+        form = UserRegisterForm(request.POST)
         if form.is_valid():
+            # Process form data
             username = form.cleaned_data.get('username')
             email = form.cleaned_data.get('email')
             password = form.cleaned_data.get('password')
@@ -53,54 +57,48 @@ def register(request):
                 form.add_error('password2', 'Passwords do not match')
                 return render(request, 'profiles/register.html', {'form': form})
 
-            # Create a new user or retrieve existing user
-            user, created = User.objects.get_or_create(
-                username=username,
-                email=email,
-                defaults={
-                    'password': password,
-                    'first_name': first_name,
-                    'last_name': last_name
-                }
-            )
+            # Create a new user
+            try:
+                user = User.objects.create_user(
+                    username=username,
+                    email=email,
+                    password=password,
+                    first_name=first_name,
+                    last_name=last_name
+                )
 
-            if not created:
-                # User already exists, display error message
-                messages.error(request, 'User already exists.')
-                return render(request, 'profiles/register.html', {'form': form})
+                # Create a Profile instance for the user
+                profile = Profile.objects.create(
+                    user=user,
+                    phone_number=phone_number,
+                    address=address,
+                    country=country,
+                    profile_picture=profile_picture
+                )
 
-            # Create or update profile
-            profile, profile_created = Profile.objects.get_or_create(
-                user=user,
-                defaults={
-                    'phone_number': phone_number,
-                    'address': address,
-                    'country': country,
-                    'profile_picture': profile_picture
-                }
-            )
+                # Debug statement to confirm profile creation
+                print("Created profile:", profile)
 
-            if not profile_created:
-                # Profile already exists, display error message
-                messages.error(request, 'Profile already exists.')
-                return render(request, 'profiles/register.html', {'form': form})
+                # Add success message
+                messages.success(request, 'Registration successful. You can now log in.')
 
-            # Success message
-            messages.success(request, 'Registration successful. You can now login.')
-            # Redirect to login page after successful registration
-            return redirect('login')  # Redirect to the login page
+                # Redirect to login page after successful registration
+                return redirect('login')  # Redirect to the login page
+
+            except Exception as e:
+                # Add error message
+                messages.error(request, f'Registration failed: {str(e)}')
 
     else:
-        form = RegisterForm()
+        form = UserRegisterForm()
 
     return render(request, 'profiles/register.html', {'form': form})
 
 
 
-
 #______________________________________________________________________________ EDIT_PROFILE VIEW
 @login_required
-def edit_profile(request):
+def user_edit_profile(request):
     profile = get_object_or_404(Profile, user=request.user)
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
