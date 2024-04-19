@@ -1,4 +1,4 @@
-<!---------------------------------------------------------------------------  REGISTER.HTML  -->
+<!--------------------------------------------------------------------------- REGISTER.HTML  -->
 {% extends 'base.html' %}
 {% load static %}
 
@@ -7,7 +7,6 @@
 {% block corecss %}
     {{ block.super }}
     <link rel="stylesheet" href="{% static 'css/profiles.css' %}">
-    {% load crispy_forms_tags %}
 {% endblock %}
 
 {% block content %}
@@ -18,7 +17,59 @@
             <div class="card-body">
                 <form method="post" class="center-form">
                     {% csrf_token %}
-                    {{ form|crispy }}
+                    <!--------------------------------------------------------- Username -->
+                    <div class="form-group">
+                        <label for="id_username">Username:</label>
+                        {{ form.username }}
+                    </div>
+                    <!--------------------------------------------------------- Password -->
+                    <div class="form-group">
+                        <label for="id_password">Password:</label>
+                        <input type="password" id="id_password" 
+                            name="password" class="form-control" 
+                            placeholder="Minimum 8 characters">
+                    </div>
+                    <!--------------------------------------------------------- Confirm Password -->
+                    <div class="form-group">
+                        <label for="id_password2">Confirm Password:</label>
+                        {{ form.password2 }}
+                    </div>
+                    <!--------------------------------------------------------- Email -->
+                    <div class="form-group">
+                        <label for="id_email">Email:</label>
+                        {{ form.email }}
+                    </div>
+                    <!--------------------------------------------------------- First name -->
+                    <div class="form-group">
+                        <label for="id_first_name">First name:</label>
+                        {{ form.first_name }}
+                    </div>
+                    <!--------------------------------------------------------- Last name -->
+                    <div class="form-group">
+                        <label for="id_last_name">Last name:</label>
+                        {{ form.last_name }}
+                    </div>
+                    <!--------------------------------------------------------- Phone number -->
+                    <div class="form-group">
+                        <label for="id_phone_number">Phone number:</label>
+                        {{ form.phone_number }}
+                    </div>
+                    <!--------------------------------------------------------- Address -->
+                    <div class="form-group">
+                        <label for="id_address">Address:</label>
+                        {{ form.address }}
+                    </div>
+                    <!--------------------------------------------------------- Country -->
+                    <div class="form-group">
+                        <label for="id_country">Country:</label>
+                        {{ form.country }}
+                    </div>
+                    <!--------------------------------------------------------- Profile Picture -->
+                    <div class="form-group">
+                        <label for="id_profile_picture">Profile Picture:</label>
+                        {{ form.profile_picture }}
+                    </div>
+                    <!--------------------------------------------------------- Submit Button -->
                     <button type="submit" class="btn btn-primary">Register</button>
                 </form>
             </div>

@@ -6,28 +6,30 @@ from .models import UserProfile
 
 from django_countries.fields import CountryField 
 
+#_______________________________________________________ UserProfileForm
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ['first_name', 'last_name', 'phone_number', 'address', 'email', 'country', 'profile_picture']
 
-     
+#_______________________________________________________ LoginForm
 class LoginForm(forms.Form):
     username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
 
 
-class RegisterForm(forms.Form):
-    first_name = forms.CharField(max_length=20)
-    last_name = forms.CharField(max_length=20)
-    phone_number = forms.CharField(max_length=15)
-    address = forms.CharField(max_length=255)
-    username = forms.CharField(max_length=20)
-    email = forms.EmailField()
-    country = CountryField()
+#_______________________________________________________ RegisterForm
+class RegisterForm(forms.Form): # ________ Widget for same style (contry + email fields)
+    first_name = forms.CharField(max_length=20, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    last_name = forms.CharField(max_length=20, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    phone_number = forms.CharField(max_length=15, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    address = forms.CharField(max_length=255, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    username = forms.CharField(max_length=20, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    email = forms.EmailField(max_length=255, widget=forms.EmailInput(attrs={'class': 'form-control'}))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control'}))
+    password2 = forms.CharField(label='Confirm password', widget=forms.PasswordInput(attrs={'class': 'form-control'}))
+    country = CountryField().formfield(widget=forms.Select(attrs={'class': 'form-control'}))
     profile_picture = forms.ImageField(required=False)
-    password = forms.CharField(widget = forms.PasswordInput)
-    password2 = forms.CharField(label = 'Confirm password', widget = forms.PasswordInput)
 
     def clean_username(self):
         username = self.cleaned_data.get('username')
