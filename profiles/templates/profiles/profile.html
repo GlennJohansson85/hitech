@@ -1,30 +1,28 @@
-<!---------------------------------------------------------------------------  PROFILE.HTML  -->
+<!---------------------------------------------------------------------------  PROFILE.HTML -->
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Login{% endblock %}
+{% block title %}Profile{% endblock %}
 
 {% block corecss %}
     {{ block.super }}
     <link rel="stylesheet" href="{% static 'css/profiles.css' %}">
 {% endblock %}
 
-
 {% block content %}
-    <h1>User Profile</h1>
+    <h1>Profile</h1>
 
     <div class="container">
         <div class="card">
             <div class="card-body">
                 <p>Username: {{ profile.user.username }}</p>
-                <p>Email: {{ profile.email }}</p>
-                <p>Password: {{ profile.password }}</p>
-                <p>First Name: {{ profile.first_name }}</p>
-                <p>Last Name: {{ profile.last_name }}</p>
+                <p>Email: {{ profile.user.email }}</p>
+                <p>First Name: {{ profile.user.first_name }}</p>
+                <p>Last Name: {{ profile.user.last_name }}</p>
                 <p>Phone number: {{ profile.phone_number }}</p>
                 <p>Address: {{ profile.address }}</p>
                 <p>Country: {{ profile.country }}</p>
-                <p>Profile Picture: {{ profile.profile_picture}}</p>
+                <p>Profile Picture: {{ profile.profile_picture }}</p>
             </div>
         </div>
     </div>

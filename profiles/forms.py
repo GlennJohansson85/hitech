@@ -2,15 +2,23 @@
 from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
-from .models import UserProfile
+from .models import Profile
 
 from django_countries.fields import CountryField 
 
 #_______________________________________________________ UserProfileForm
-class UserProfileForm(forms.ModelForm):
+class ProfileForm(forms.ModelForm):
     class Meta:
-        model = UserProfile
-        fields = ['first_name', 'last_name', 'phone_number', 'address', 'email', 'country', 'profile_picture']
+        model = Profile
+        fields = [
+            'first_name',
+            'last_name',
+            'phone_number',
+            'address',
+            'email',
+            'country',
+            'profile_picture',
+        ]
 
 #_______________________________________________________ LoginForm
 class LoginForm(forms.Form):
