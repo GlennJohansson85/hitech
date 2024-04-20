@@ -10,10 +10,23 @@
 
 {% block content %}
     <h1>All Products</h1>
+    <!-- Add anchor links to all main categories -->
+    <ul>
+        <!-- Link to TV category -->
+        <li><a href="{% url 'tv_category' %}">TV</a></li>
+        <!-- Link to Laptops category -->
+        <li><a href="{% url 'laptops_category' %}">Laptops</a></li>
+        <!-- Link to Smartphones category -->
+        <li><a href="{% url 'smartphones_category' %}">Smartphones</a></li>
+        <!-- Link to Cameras category -->
+        <li><a href="{% url 'cameras_category' %}">Cameras</a></li>
+    </ul>
+
+    <!-- Display products by category -->
     {% for category, subcategories in category_subcategories.items %}
-        <h2>{{ category.name }}</h2>
+        <h2 id="{{ category.name|lower }}">{{ category.name }}</h2>
         {% for subcategory, products in subcategories.items %}
-            <h3>{{ subcategory.name }}</h3>
+            <h3 id="{{ subcategory.name|lower }}">{{ subcategory.name }}</h3>
             <div class="card-body">
                 <div class="row">
                     {% for product in products %}

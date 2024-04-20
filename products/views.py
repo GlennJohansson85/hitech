@@ -19,7 +19,6 @@ def product_subcategory(request, category_id):
     
     return render(request, 'products/product_subcategory.html', {'category': category, 'subcategories': subcategories})
 
-
 def product_list(request):
     """ A view to show all products with pagination """
     categories = Category.objects.all()
@@ -46,6 +45,42 @@ def product_list(request):
         'category_subcategories': category_subcategories,
         'products': products,  # Pass paginated products to the template
     })
+
+def tv_category(request):
+    subcategory = request.GET.get('subcategory')
+    if subcategory:
+        tv_products = Product.objects.filter(category__name='TV', subcategory__name=subcategory)
+    else:
+        tv_products = Product.objects.filter(category__name='TV')
+    return render(request, 'products/product_list.html', {'products': tv_products})
+
+
+def laptops_category(request):
+    subcategory = request.GET.get('subcategory')
+    if subcategory:
+        laptop_products = Product.objects.filter(category__name='Laptops', subcategory__name=subcategory)
+    else:
+        laptop_products = Product.objects.filter(category__name='Laptops')
+    return render(request, 'products/product_list.html', {'products': laptop_products})
+
+
+def smartphones_category(request):
+    subcategory = request.GET.get('subcategory')
+    if subcategory:
+        smartphone_products = Product.objects.filter(category__name='Smartphones', subcategory__name=subcategory)
+    else:
+        smartphone_products = Product.objects.filter(category__name='Smartphones')
+    return render(request, 'products/product_list.html', {'products': smartphone_products})
+
+
+def cameras_category(request):
+    subcategory = request.GET.get('subcategory')
+    if subcategory:
+        camera_products = Product.objects.filter(category__name='Cameras', subcategory__name=subcategory)
+    else:
+        camera_products = Product.objects.filter(category__name='Cameras')
+    return render(request, 'products/product_list.html', {'products': camera_products})
+
 
 
 def product_detail(request, product_id):

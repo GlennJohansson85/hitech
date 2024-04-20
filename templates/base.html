@@ -81,7 +81,6 @@
             </ul>
         </div>
     </header>
-
 <!------------------------------------------------------------------------ BOTTOM NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
         <div class="container-fluid">
@@ -102,58 +101,54 @@
                     </li>
 <!--------------------------------------------------------------- TV dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-icon" href="#" id="tvDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle nav-icon" href="{% url 'tv_category' %}" id="tvDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-tv"></i>
                             <span>TV</span>
                         </a>
                         <ul class="dropdown-menu"  aria-labelledby="tvDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">All</a></li>
-                            <li><a class="dropdown-item" href="#">lg</a></li>
-                            <li><a class="dropdown-item" href="#">Philips</a></li>
-                            <li><a class="dropdown-item" href="#">Samsung</a></li>
-                            <li><a class="dropdown-item" href="#">Sony</a></li>
+                            <li><a class="dropdown-item" href="{% url 'tv_category' %}?subcategory=lg">LG</a></li>
+                            <li><a class="dropdown-item" href="{% url 'tv_category' %}?subcategory=philips">Philips</a></li>
+                            <li><a class="dropdown-item" href="{% url 'tv_category' %}?subcategory=samsung">Samsung</a></li>
+                            <li><a class="dropdown-item" href="{% url 'tv_category' %}?subcategory=sony">Sony</a></li>
                         </ul>
                     </li>
 <!--------------------------------------------------------------- Laptops dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-icon" href="#" id="computerDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle nav-icon" href="{% url 'laptops_category' %}" id="computerDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-laptop"></i>
                             <span>Laptops</span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="computerDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">All</a></li>
-                            <li><a class="dropdown-item" href="#">Apple</a></li>
-                            <li><a class="dropdown-item" href="#">Lenovo</a></li>
-                            <li><a class="dropdown-item" href="#">Samsung</a></li>
-                            <li><a class="dropdown-item" href="#">Sony</a></li>
+                            <li><a class="dropdown-item" href="{% url 'laptops_category' %}?subcategory=galaxybook">GalaxyBook</a></li>
+                            <li><a class="dropdown-item" href="{% url 'laptops_category' %}?subcategory=lenovo">Lenovo</a></li>
+                            <li><a class="dropdown-item" href="{% url 'laptops_category' %}?subcategory=macbook">MacBook</a></li>
+                            <li><a class="dropdown-item" href="{% url 'laptops_category' %}?subcategory=vaio">Vaio</a></li>
                         </ul>
                     </li>
 <!--------------------------------------------------------------- Smartphones dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-icon" href="#" id="mobileDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle nav-icon" href="{% url 'smartphones_category' %}"id="mobileDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-mobile"></i>
                             <span>Smartphones</span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="mobileDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">All</a></li>
-                            <li><a class="dropdown-item" href="#">Apple</a></li>
-                            <li><a class="dropdown-item" href="#">Huawei</a></li>
-                            <li><a class="dropdown-item" href="#">Samsung</a></li>
-                            <li><a class="dropdown-item" href="#">Sony-Ericsson</a></li>
+                            <li><a class="dropdown-item" href="{% url 'smartphones_category' %}?subcategory=apple">Apple</a></li>
+                            <li><a class="dropdown-item" href="{% url 'smartphones_category' %}?subcategory=galaxy">Galaxy</a></li>
+                            <li><a class="dropdown-item" href="{% url 'smartphones_category' %}?subcategory=huawei">Huawei</a></li>
+                            <li><a class="dropdown-item" href="{% url 'smartphones_category' %}?subcategory=sony-ericsson">Sony-Ericsson</a></li>
                         </ul>
                     </li>
 <!--------------------------------------------------------------- Cameras dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-icon" href="#" id="cameraDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle nav-icon" href="{% url 'cameras_category' %}"  id="cameraDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-camera"></i>
                             <span>Cameras</span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="cameraDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">All</a></li>
-                            <li><a class="dropdown-item" href="#">Canon</a></li>
-                            <li><a class="dropdown-item" href="#">Leica</a></li>
-                            <li><a class="dropdown-item" href="#">Nikon</a></li>
-                            <li><a class="dropdown-item" href="#">Sony</a></li>
+                            <li><a class="dropdown-item" href="{% url 'cameras_category' %}?subcategory=alpha">Alpha</a></li>
+                            <li><a class="dropdown-item" href="{% url 'cameras_category' %}?subcategory=canon">Canon</a></li>
+                            <li><a class="dropdown-item" href="{% url 'cameras_category' %}?subcategory=leica">Leica</a></li>
+                            <li><a class="dropdown-item" href="{% url 'cameras_category' %}?subcategory=nikon">Nikon</a></li>
                         </ul>
                     </li>
                 </ul>
