@@ -2,14 +2,15 @@
 
 /*_________________________________________________________________ OVERALL */
 html {
-    background: #121212;
+    background: #020202;
 }
 
 body {
     max-width: 1200px;
     margin: 0 auto !important;
-    background: linear-gradient(45deg, rgb(28, 28, 28) 40%, rgba(33, 33, 36, 0.96) 51.2%, rgb(0, 0, 0) 98.6%);
-    box-shadow: 0 0 200px rgba(165, 28, 189, 0.5);
+    background: linear-gradient(to right, #000000, #2d2c2b);
+    border-radius: 2px;
+    box-shadow: 0 0 40px rgba(11, 164, 191, 0.87);
 }
 
 /*_________________________________________________________________ LOGIN MESSAGE */
@@ -35,10 +36,6 @@ body {
     src: url('/static/font/TechHeadlines-3Pzp.ttf') format('truetype');
 }
 
-@font-face {  /*_________________ Nav/Dropdown */
-    font-family: 'JetbrainsMonoBold-51Xez';
-    src: url('/static/font/JetbrainsMonoBold-51Xez.ttf') format('truetype');
-}
 
 /*_________________________________________________________________ NAVBAR */
 .navbar-brand-a {
@@ -56,7 +53,8 @@ body {
 }
 
 .navbar .nav-link {
-    font-family: 'JetbrainsMonoBold-51Xez', sans-serif;
+    font-family: 'Montesarri', sans-serif;
+  
     color: #fff;
 }
 
@@ -73,6 +71,6 @@ body {
 }
 
 .dropdown-item { /*_______________ Dropdown text */
-    font-family: 'JetbrainsMonoBold-51Xez', sans-serif; 
+    font-family: 'montesarri', sans-serif; 
     font-size: 12px;
 }

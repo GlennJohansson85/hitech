@@ -69,9 +69,12 @@ p { /*______________________________________________ Product cards + customer na
     padding-left: 40px; 
     margin-bottom: 25px;
     border-radius: 5px;
-    background-image: url('/media/cover/laptop.avif');
+    background-image: url("/media/index/jumbatron.avif");
+    background-size: cover; 
     background-position: center;
+    position: relative;
 }
+
 
 /*_____________________________________________________________ PRODUCT CARDS */
 .card-container {
