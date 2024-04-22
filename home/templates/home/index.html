@@ -2,7 +2,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Home{% endblock %}
-<!------------------------------------------------------------------------ index.css -->
+<!------------------------------------------------------------------------ Index.css -->
 {% block corecss %}
     {{ block.super }}
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
@@ -14,13 +14,13 @@
 
 <!--------------------------------------------------------------------------------------------------- JUMBATRON -->
 <div class="jumbotron-container">
-  <h1>Welcome to hitech!</h1>
-  <h7>We got the best tech for the lowest price!</h7>
+  <h1 class="jumbatron-title">Welcome to hitech!</h1>
+  <h7 class="jumbatron-text" >We got the best tech for the lowest price!</h7>
   <br><br>
-  <a class="btn btn-primary" href="#" role="button"><h7>Shop Now!</h7></a>
+  <a class="btn btn-primary" href="{% url 'product_list' %}" role="button"><h5>Shop Now!</h5></a>
 </div>
 <!--------------------------------------------------------------------------------------------------- PRODUCT CARDS -->
-<!------------------------------------------------------------------------ tv -->
+<!------------------------------------------------------------------------ Tv -->
   <div class="card-container">
     <div class="row mb-4">
       <div class="col-md-6">
@@ -28,12 +28,12 @@
           <img src="/media/products/tv/samsung/tv_samsung_s90d.png" alt="TV Image" class="card-img">
           <div class="card-body">
             <h5>Samsung 65-inch</h5>
-            <h6>only €2160</h6>
+            <h6>Only €2160</h6>
             <a href="http://127.0.0.1:8000/product/29/" class="btn btn-primary"><h7>Buy Now!</h7></a>
           </div>
         </div>
       </div>
-  <!------------------------------------------------------------------------ laptops -->
+  <!------------------------------------------------------------------------ Laptops -->
       <div class="col-md-6">
         <div class="card text-center">
           <img src="/media/products/laptops/macbook/laptops_macbook_m3.png" alt="Laptop Image" class="card-img">
@@ -45,7 +45,7 @@
         </div>
       </div>
     </div>
-  <!------------------------------------------------------------------------ smartphones -->
+  <!------------------------------------------------------------------------ Smartphones -->
     <div class="row mb-4">
       <div class="col-md-6">
         <div class="card text-center">
@@ -57,7 +57,7 @@
           </div>
         </div>
       </div>
-  <!------------------------------------------------------------------------ cameras -->
+  <!------------------------------------------------------------------------ Cameras -->
       <div class="col-md-6">
         <div class="card text-center">
           <img src="/media/products/cameras/alpha/camera__alpha_s7.png" alt="Camera Image" class="card-img">
@@ -71,7 +71,7 @@
     </div>
   </div>
 
-  <!--------------------------------------------------------------------------------------------------- REVIEWS -->
+  <!--------------------------------------------------------------------------------------------------- QUOTES -->
   <div class="quote-container">
     <h2 class="quote-title">Customer Reviews</h2>
       <div class="row mb-4">
@@ -112,7 +112,7 @@
     </div>
   </div>
 
-  <!--------------------------------------------------------------------------------------------------- Newsletter Signup -->
+  <!--------------------------------------------------------------------------------------------------- NEWSLETTER -->
   <div class="newsletter-container">
     <h3 class="newsletter-title ">Sign up for our newsletter!</h3>
       <p class="newsletter-breadtext">Get the latest updates and best prices!</p>
@@ -121,7 +121,7 @@
         </div>
       </div>
 
-  <!--------------------------------------------------------------------------------------------------- Customer Support Information -->
+  <!--------------------------------------------------------------------------------------------------- CUSTOMER SUPPORT -->
   <div class="row">
     <div class="col-md-6">
       <h2>Contact Us</h2>

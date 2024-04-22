@@ -1,4 +1,10 @@
 /*_________________________________________________________________________ BASE.HTML - EXTENDS TO ALL TEMPLATES */
+/*_________________________________________________________________ FONTS */
+@font-face {
+    font-family: 'TechHeadlines-3Pzp';
+    src: url('/static/font/TechHeadlines-3Pzp.ttf') format('truetype')
+}
+
 
 /*_________________________________________________________________ OVERALL */
 html {
@@ -30,16 +36,6 @@ body {
     margin: 0.25rem 0.25rem 0.25rem auto;
 }
 
-/*_________________________________________________________________ FONTS */
-@font-face { /*__________________ Brand + extendend to child temp. */
-    font-family: 'TechHeadlines-3Pzp';
-    src: url('/static/font/TechHeadlines-3Pzp.ttf') format('truetype');
-}
-
-@font-face { /*__________________ Brand + extendend to child temp. */
-    font-family: 'JetbrainsMonoMedium-nRvBM';
-    src: url('/static/font/JetbrainsMonoMedium-nRvBM.ttf') format('truetype');
-}
 
 
 /*_________________________________________________________________ NAVBAR */
@@ -58,8 +54,6 @@ body {
 }
 
 .navbar .nav-link {
-    font-family: 'JetbrainsMonoMedium-nRvBM', sans-serif;
-  
     color: #fff;
 }
 

@@ -1,5 +1,4 @@
-/*__________________________________________________________________________________ HITECH/STATIC/CSS/INDEX.CSS */
-
+/*__________________________________________________________________________________ HOME/INDEX.CSS */
 /*_____________________________________________________________ FONT FAMILIES */
 @font-face {
     font-family: 'TechHeadlinesItalic-8D0M';
@@ -11,60 +10,46 @@
     src: url('/static/font/TechHeadlines-3Pzp.ttf') format('truetype');
 }
 
-@font-face {
-    font-family: 'TeotericBold-xq1q';
-    src: url('/static/font/NeotericBold-xq1q.ttf') format('truetype');
-}
-
-h1, h2 { /*_________________________________________ Titles */
-    font-family: 'TeotericBold-xq1q','sans-serif';
+/*_____________________________________________________________ HEADERS */
+h1, h2, h7 {
+    font-family: 'TechHeadlinesItalic-8D0M','sans-serif';
     letter-spacing: 2px;
     word-spacing: 2px;
+    text-shadow: 4px 0px 0px rgb(0, 0, 0);
+}
+
+h3, h4, h5, h6 {
+    font-family: 'TechHeadlines-3Pzp','sans-serif';
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    text-shadow: 4px 0px 0px rgb(0, 0, 0);    
+}
+
+h1 {
     color: #ffc401;
-    text-shadow: 4px 0px 0px rgb(0, 0, 0);
-}
-
-h3 { /*______________________________________________ Quotes */
-    font-family: 'TechHeadlines-3Pzp','sans-serif';
-    letter-spacing: 1px;
-    color: #fff;
-    text-shadow: 4px 0px 0px rgb(0, 0, 0);
-    
-}
-
-h4 { /*______________________________________________ Customer Reviews */
-    font-family: 'TechHeadlines-3Pzp','sans-serif';
-    letter-spacing: 1px;
-    color: #ee6cd0;
-    text-shadow: 4px 0px 0px rgb(0, 0, 0);
-}
-
-
-h5 { /*______________________________________________ Product Card Title */
-    font-family: 'TechHeadlines-3Pzp','sans-serif';
-    letter-spacing: 1px;
-    color: #ff16b9;
-    text-shadow: 1px 0px 0px #ee6cd0;
-}
-
-h6 { /*______________________________________________ Price font */
-    font-family: 'TechHeadlines-3Pzp','sans-serif';
-    letter-spacing: 2px;
-    color: #ffc401!important;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-
-h7 { /*______________________________________________ Button */
     font-family: 'TechHeadlinesItalic-8D0M','sans-serif';
-    letter-spacing: 1px;
-    color: #eae6e6!important;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-p { /*______________________________________________ Product cards + customer names */
+h2 {
+    color: #ffc401;
+    font-family: 'TechHeadlinesItalic-8D0M','sans-serif';
+    }
+
+h3 {color: #fff;}
+
+h4 {color: #ee6cd0;}
+
+h5 {color: #fff;}
+
+h6 {color: #ffc401;}
+
+h7 {color: #fff;}
+
+p { color: #fff;
     font-family: 'Montessari','sans-serif';
     color: #fff;
 }
+
 
 .index-all {
     margin-left: 20px;
@@ -75,12 +60,20 @@ p { /*______________________________________________ Product cards + customer na
 .jumbotron-container {
     padding-top: 80px;
     padding-bottom: 80px;
-    padding-left: 40px; 
+    padding-left: 40px;
     border-radius: 5px;
     background-image: url("/media/index/jumbatron.avif");
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
     position: relative;
+}
+
+.jumbatron-title {
+
+}
+
+.jumbatron-text {
+
 }
 
 
