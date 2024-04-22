@@ -36,6 +36,11 @@ body {
     src: url('/static/font/TechHeadlines-3Pzp.ttf') format('truetype');
 }
 
+@font-face { /*__________________ Brand + extendend to child temp. */
+    font-family: 'JetbrainsMonoMedium-nRvBM';
+    src: url('/static/font/JetbrainsMonoMedium-nRvBM.ttf') format('truetype');
+}
+
 
 /*_________________________________________________________________ NAVBAR */
 .navbar-brand-a {
@@ -53,7 +58,7 @@ body {
 }
 
 .navbar .nav-link {
-    font-family: 'Montesarri', sans-serif;
+    font-family: 'JetbrainsMonoMedium-nRvBM', sans-serif;
   
     color: #fff;
 }
