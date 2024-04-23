@@ -1,4 +1,4 @@
-/*__________________________________________________________________________________ HOME/INDEX.CSS */
+/*_____________________________________________________________ HOME/INDEX.CSS */
 /*_____________________________________________________________ FONTS */
 @font-face {
     font-family: 'TechHeadlinesItalic-8D0M';
@@ -16,7 +16,6 @@
 }
 
 /*_____________________________________________________________ HEADERS */
-
 h1 { /*__________________ Big Title */
     color: #ffc401;
     font-family: 'TechHeadlinesItalic-8D0M','sans-serif';
@@ -44,6 +43,7 @@ h3 { /*__________________ Nesletter */
 h4 { /*__________________ Quotes */
     color: #ee6cd0;
     font-family: 'TechHeadlines-3Pzp','sans-serif';
+    letter-spacing: 1px;
     word-spacing: 2px;
     text-shadow: 4px 0px 0px rgb(0, 0, 0);
 }
@@ -83,7 +83,7 @@ H8 { /*__________________ "Buy/Shop now!" Button text */
 p { /*__________________ Quote name */
     color: #fff;
     font-family: 'QuicksandboldobliqueRegular-XE3o','sans-serif';
-    font-size: px;
+    font-size: 20px;
 }
 
 /*_____________________________________________________________ OVERALL */
