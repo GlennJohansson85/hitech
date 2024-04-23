@@ -1,5 +1,5 @@
 /*__________________________________________________________________________________ HOME/INDEX.CSS */
-/*_____________________________________________________________ FONT FAMILIES */
+/*_____________________________________________________________ FONTS */
 @font-face {
     font-family: 'TechHeadlinesItalic-8D0M';
     src: url('/static/font/TechHeadlinesItalic-8D0M.ttf') format('truetype');
@@ -10,48 +10,84 @@
     src: url('/static/font/TechHeadlines-3Pzp.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'QuicksandboldobliqueRegular-XE3o';
+    src: url('/static/font/QuicksandboldobliqueRegular-XE3o.otf') format('truetype');
+}
+
 /*_____________________________________________________________ HEADERS */
-h1, h2, h7 {
+
+h1 { /*__________________ Big Title */
+    color: #ffc401;
     font-family: 'TechHeadlinesItalic-8D0M','sans-serif';
     letter-spacing: 2px;
     word-spacing: 2px;
     text-shadow: 4px 0px 0px rgb(0, 0, 0);
 }
 
-h3, h4, h5, h6 {
-    font-family: 'TechHeadlines-3Pzp','sans-serif';
-    letter-spacing: 1px;
+h2 { /*__________________ Small Title */
+    color: #ffc401;
+    font-family: 'TechHeadlinesItalic-8D0M','sans-serif';
+    letter-spacing: 2px;
     word-spacing: 2px;
-    text-shadow: 4px 0px 0px rgb(0, 0, 0);    
+    text-shadow: 4px 0px 0px rgb(0, 0, 0);
 }
 
-h1 {
-    color: #ffc401;
-    font-family: 'TechHeadlinesItalic-8D0M','sans-serif';
-}
-
-h2 {
-    color: #ffc401;
-    font-family: 'TechHeadlinesItalic-8D0M','sans-serif';
-    }
-
-h3 {color: #fff;}
-
-h4 {color: #ee6cd0;}
-
-h5 {color: #fff;}
-
-h6 {color: #ffc401;}
-
-h7 {color: #fff;}
-
-p { color: #fff;
-    font-family: 'Montessari','sans-serif';
+h3 { /*__________________ Nesletter */
     color: #fff;
+    font-family: 'TechHeadlinesItalic-8D0M','sans-serif';
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    text-shadow: 4px 0px 0px rgb(0, 0, 0);
 }
 
+h4 { /*__________________ Quotes */
+    color: #ee6cd0;
+    font-family: 'TechHeadlines-3Pzp','sans-serif';
+    word-spacing: 2px;
+    text-shadow: 4px 0px 0px rgb(0, 0, 0);
+}
 
-.index-all {
+h5 { /*__________________ Card name */
+    color: #fff;
+    font-family: 'TechHeadlines-3Pzp','sans-serif';
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    text-shadow: 4px 0px 0px rgb(0, 0, 0);
+}
+
+h6 { /*__________________ Card price */
+    color: #ffc401;
+    font-family: 'TechHeadlines-3Pzp','sans-serif';
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    text-shadow: 4px 0px 0px rgb(0, 0, 0);
+}
+
+h7 { /*__________________ Jumbatron second text */
+    color: #fff;
+    font-family: 'TechHeadlinesItalic-8D0M','sans-serif';
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    text-shadow: 4px 0px 0px rgb(0, 0, 0);
+}
+
+H8 { /*__________________ "Buy/Shop now!" Button text */
+    color: #fff;
+    font-family:'TechHeadlinesItalic-8D0M','sans-serif';
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+p { /*__________________ Quote name */
+    color: #fff;
+    font-family: 'QuicksandboldobliqueRegular-XE3o','sans-serif';
+    font-size: px;
+}
+
+/*_____________________________________________________________ OVERALL */
+.all {
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -65,19 +101,9 @@ p { color: #fff;
     background-image: url("/media/index/jumbatron.avif");
     background-size: cover;
     background-position: center;
-    position: relative;
 }
 
-.jumbatron-title {
-
-}
-
-.jumbatron-text {
-
-}
-
-
-/*_____________________________________________________________ PRODUCT CARDS */
+/*_____________________________________________________________ CARDS */
 .card-container {
     margin-top: 25px;
     margin-left: 30px;
@@ -102,8 +128,6 @@ p { color: #fff;
 
 .card-body {
     z-index: 1;
-    font-family: 'JetbrainsMonoExtrabold-ywLd5', sans-serif;
-    text-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -114,17 +138,16 @@ p { color: #fff;
 
 /*_____________________________________________________________ BUTTONS */
 .btn-primary {
-    padding-top: 8px;
-    background-color: #20815f!important; /* Primary button color */
-    border-color: #fff!important;
+    background-color: #20815f;
+    border-color: #fff;
 }
 
 .btn-primary:hover {
-    background-color: #ffc401!important; /* Darker shade on hover */
-    border-color: #010101!important; 
+    background-color: #ffc401;
+    border-color: #fff; 
 }
 
-/*_____________________________________________________________ REVIEWS */
+/*_____________________________________________________________ QUOTES */
 .quote-container {
     margin-top: 25px;
     border-radius: 5px;
@@ -145,37 +168,4 @@ p { color: #fff;
 .quote-name {
     padding-top: 12px;
     padding-left: 10px;
-}
-
-/*_____________________________________________________________ NEWSLETTER */
-.newsletter-container {
-    margin-top: 25px;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-/*_____________________________________________________________ BLOG POSTS */
-.blog-posts {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-/*_____________________________________________________________ DEALS */
-.deal-of-the-day {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-/*_____________________________________________________________ SUPPORT */
-.contact-info {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
 }

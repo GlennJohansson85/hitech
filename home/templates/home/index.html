@@ -10,14 +10,14 @@
 
 
 {% block content %}
-<div class=index-all>
+<div class=all>
 
 <!--------------------------------------------------------------------------------------------------- JUMBATRON -->
 <div class="jumbotron-container">
   <h1 class="jumbatron-title">Welcome to hitech!</h1>
   <h7 class="jumbatron-text" >We got the best tech for the lowest price!</h7>
   <br><br>
-  <a class="btn btn-primary" href="{% url 'product_list' %}" role="button"><h5>Shop Now!</h5></a>
+  <a class="btn btn-primary" href="{% url 'product_list' %}" role="button"><h8>Shop Now!</h8></a>
 </div>
 <!--------------------------------------------------------------------------------------------------- PRODUCT CARDS -->
 <!------------------------------------------------------------------------ Tv -->
@@ -29,7 +29,7 @@
           <div class="card-body">
             <h5>Samsung 65-inch</h5>
             <h6>Only €2160</h6>
-            <a href="http://127.0.0.1:8000/product/29/" class="btn btn-primary"><h7>Buy Now!</h7></a>
+            <a href="http://127.0.0.1:8000/product/29/" class="btn btn-primary"><h8>Buy Now!</h8></a>
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@
           <div class="card-body">
             <h5>MacBook Air M3</h5>
             <h6>€1378</h6>
-            <a href="http://127.0.0.1:8000/product/15/" class="btn btn-primary"><h7>Buy Now!</h7></a>
+            <a href="http://127.0.0.1:8000/product/15/" class="btn btn-primary"><h8>Buy Now!</h8></a>
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@
           <div class="card-body">
             <h5>Pro-I</h5>
             <h6>€1167</h6>
-            <a href="http://127.0.0.1:8000/product/37/" class="btn btn-primary"><h7>Buy Now!</h7></a>
+            <a href="http://127.0.0.1:8000/product/37/" class="btn btn-primary"><h8>Buy Now!</h8></a>
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@
           <div class="card-body">
             <h5>S Alpha 7</h5>
             <h6>€1340</h6>
-            <a href="http://127.0.0.1:8000/product/4/" class="btn btn-primary"><h7>Buy Now!</h7></a>
+            <a href="http://127.0.0.1:8000/product/4/" class="btn btn-primary"><h8>Buy Now!</h8></a>
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@
 
   <!--------------------------------------------------------------------------------------------------- QUOTES -->
   <div class="quote-container">
-    <h2 class="quote-title">Customer Reviews</h2>
+    <h2 class="quote-title">Customers Quotes</h2>
       <div class="row mb-4">
         <div class="col-md-6">
             <div class="quote">
@@ -112,25 +112,5 @@
     </div>
   </div>
 
-  <!--------------------------------------------------------------------------------------------------- NEWSLETTER -->
-  <div class="newsletter-container">
-    <h3 class="newsletter-title ">Sign up for our newsletter!</h3>
-      <p class="newsletter-breadtext">Get the latest updates and best prices!</p>
-            <!-- Newsletter form here -->
-          </div>
-        </div>
-      </div>
-
-  <!--------------------------------------------------------------------------------------------------- CUSTOMER SUPPORT -->
-  <div class="row">
-    <div class="col-md-6">
-      <h2>Contact Us</h2>
-      <!-- Contact information here -->
-    </div>
-    <div class="col-md-6">
-      <!-- social media links here -->
-    </div>
-  </div>
-</div>
 {% endblock %}
 
