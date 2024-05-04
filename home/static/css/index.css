@@ -72,7 +72,7 @@ h7 { /*__________________ Jumbatron second text */
     text-shadow: 4px 0px 0px rgb(0, 0, 0);
 }
 
-H8 { /*__________________ "Buy/Shop now!" Button text */
+h8 { /*__________________ "Buy/Shop now!" Button text */
     color: #fff;
     font-family:'TechHeadlinesItalic-8D0M','sans-serif';
     letter-spacing: 2px;
@@ -98,7 +98,7 @@ p { /*__________________ Quote name */
     padding-bottom: 80px;
     padding-left: 40px;
     border-radius: 5px;
-    background-image: url("/media/index/jumbatron.avif");
+    background-image: url("/media/jumbatron.avif");
     background-size: cover;
     background-position: center;
 }
@@ -106,8 +106,8 @@ p { /*__________________ Quote name */
 /*_____________________________________________________________ CARDS */
 .card-container {
     margin-top: 25px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-right: 25px;
+    margin-left: 25px;
 }
 
 .card {
@@ -118,9 +118,9 @@ p { /*__________________ Quote name */
 } 
 
 .card-img {
-    max-width: 100%;
-    height: 100%; 
-    object-fit: cover; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
