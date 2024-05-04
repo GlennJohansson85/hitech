@@ -1,11 +1,11 @@
 #____________________________________________________________________  PRODUCTS/FORMS.PY
 from django import forms
-from .models import Product
+from .models import Product, Category, Subcategory
 
 class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
-        fields = ['category', 'subcategory', 'title', 'description', 'price', 'rating', 'image']
+        fields = '__all__'
 
     
     def clean_image(self):
